@@ -3,29 +3,86 @@
 Zadání [frontend](https://uuapp.plus4u.net/uu-bookkit-maing01/78462435-bbbfbad5d130488e85ccad7d34b61a22/book/page?code=67586767) 
 & [backend](https://uuapp.plus4u.net/uu-bookkit-maing01/bbbfbad5d130488e85ccad7d34b61a22/book/page?code=uuToDo_uuSubApp) 
 
+### Schema
+
+TodoInstance object:
+```js
+const todoInstanceSchema = {
+  id: "012...", //generated unique code
+  awid: "012...", //app instance id - unique code specified externally
+  sys: {
+    cTs: "...", //create timestamp
+    mTs: "...", //modification timestamp
+    rev: 0 //revision number
+  },
+  code: "...", //unique code of the todoInstance
+  name: "...", //name of the todoInstance
+  description : "...", //description of the todoInstance
+  state: "..." //state of the todoInstance - one of active, suspended, closed
+};
+```
+
+List object:
+```js
+const listSchema = {
+  id: "012...", //generated unique code
+  awid: "012...", //app instance id - unique code specified externally
+  sys: {
+    cTs: "...", //create timestamp
+    mTs: "...", //modification timestamp
+    rev: 0 //revision number
+  },
+  name: "...", //name of the list
+  description : "...", //description of the list
+  deadline: "2021-03-15" //date when all items on the list are supossed to be done
+};
+```
+
+Item object: 
+```js
+const itemSchema = {
+  id: "012...", //generated unique code
+  awid: "012...", //app instance id - unique code specified externally
+  sys: {
+    cTs: "...", //create timestamp
+    mTs: "...", //modification timestamp
+    rev: 0 //revision number
+  },
+  listId: "...", //id of the list in which the item belongs to
+  text: "...", //text of the item
+  state: "...", //state of item, one of active, completed, cancelled 
+  highPriority: false //mark if it is high priority item
+};
+```
+
+### API
 
 **todoInstance**
-- [ ] sys/uuAppWorkspace/init
-- [ ] sys/uuAppWorkspace/load
+- [x] sys/uuAppWorkspace/init
+- [x] sys/uuAppWorkspace/load
 - [ ] todoInstance/update
 - [ ] todoInstance/setState
 
 **list**
  
-- [ ] list/create
-- [ ] list/get
-- [ ] list/update
-- [ ] list/delete
-- [ ] list/list
+- [x] list/create
+- [x] list/get
+- [x] list/update
+- [x] list/delete
+- [x] list/list
 
 **item**
 
-- [ ] list/create
-- [ ] list/get
-- [ ] list/update
-- [ ] list/setFinalState
-- [ ] list/delete
-- [ ] list/list
+- [x] list/create
+- [x] list/get
+- [x] list/update
+- [x] list/setFinalState
+- [x] list/delete
+- [x] list/list
+
+TODO:
+- [ ] backend testy
+- [ ] frontend
 
 ## Development and Usage
 

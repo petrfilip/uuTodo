@@ -6,6 +6,73 @@
         "httpMethod": "POST",
         "type": "CMD"
       },
+      "sys/uuAppWorkspace/load": {
+        "realization": "api/controllers/TodoInstanceController.load",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+
+      "list/create": {
+        "realization": "api/controllers/ListController.create",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "list/get": {
+        "realization": "api/controllers/ListController.get",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "list/update": {
+        "realization": "api/controllers/ListController.update",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "list/delete": {
+        "realization": "api/controllers/ListController.delete",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "list/list": {
+        "realization": "api/controllers/ListController.list",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+
+      "item/create": {
+        "realization": "api/controllers/ItemController.create",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "item/get": {
+        "realization": "api/controllers/ItemController.get",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "item/update": {
+        "realization": "api/controllers/ItemController.update",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "item/setFinalState": {
+        "realization": "api/controllers/ItemController.setFinalState",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "item/delete": {
+        "realization": "api/controllers/ItemController.delete",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "item/list": {
+        "realization": "api/controllers/ItemController.list",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+
+
       "defaultUve": {
         "realization": "index.html",
         "httpMethod": "GET",

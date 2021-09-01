@@ -11,6 +11,59 @@
         "sysStateList": ["created"],
         "profileList": ["AwidLicenseOwner"]
       },
+      "sys/uuAppWorkspace/load": {
+        "sysStateList": ["active"],
+        "profileList": ["AwidLicenseOwner"]
+      },
+
+
+      "list/create": {
+        "sysStateList": ["active"],
+        "profileList": ["Authorities", "Executives", ",AwidLicenseOwner"]
+      },
+      "list/get": {
+        "sysStateList": ["active"],
+        "profileList": ["Authorities", "Executives", ",AwidLicenseOwner"]
+      },
+      "list/update": {
+        "sysStateList": ["active"],
+        "profileList": ["Authorities", "Executives", ",AwidLicenseOwner"]
+      },
+      "list/delete": {
+        "sysStateList": ["active"],
+        "profileList": ["Authorities", "Executives", ",AwidLicenseOwner"]
+      },
+      "list/list": {
+        "sysStateList": ["active"],
+        "profileList": ["Authorities", "Executives", ",AwidLicenseOwner"]
+      },
+
+
+      "item/create": {
+        "sysStateList": ["active"],
+        "profileList": ["Authorities", "Executives", ",AwidLicenseOwner"]
+      },
+      "item/get": {
+        "sysStateList": ["active"],
+        "profileList": ["Authorities", "Executives", ",AwidLicenseOwner"]
+      },
+      "item/update": {
+        "sysStateList": ["active"],
+        "profileList": ["Authorities", "Executives", ",AwidLicenseOwner"]
+      },
+      "item/delete": {
+        "sysStateList": ["active"],
+        "profileList": ["Authorities", "Executives", ",AwidLicenseOwner"]
+      },
+      "item/list": {
+        "sysStateList": ["active"],
+        "profileList": ["Authorities", "Executives", ",AwidLicenseOwner"]
+      },
+      "item/setFinalState": {
+        "sysStateList": ["active"],
+        "profileList": ["Authorities", "Executives", ",AwidLicenseOwner"]
+      },
+
       "defaultUve": {
         "profileList": ["Public"]
       },

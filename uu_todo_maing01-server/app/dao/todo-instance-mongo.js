@@ -1,7 +1,7 @@
 "use strict";
 const { UuObjectDao } = require("uu_appg01_server").ObjectStore;
 
-class TodoMainMongo extends UuObjectDao {
+class TodoInstanceMongo extends UuObjectDao {
   async createSchema() {
     await super.createIndex({ awid: 1 }, { unique: true });
   }
@@ -10,15 +10,14 @@ class TodoMainMongo extends UuObjectDao {
     return await super.insertOne(uuObject);
   }
 
-  async get(awid, id) {
+  async getByAwid(awid) {
     let filter = {
       awid: awid,
-      id: id,
     };
     return await super.findOne(filter);
   }
 
-  async update(uuObject) {
+  async updateByAwid(uuObject) {
     let filter = {
       awid: uuObject.awid,
       id: uuObject.id,
@@ -35,4 +34,4 @@ class TodoMainMongo extends UuObjectDao {
   }
 }
 
-module.exports = TodoMainMongo;
+module.exports = TodoInstanceMongo;

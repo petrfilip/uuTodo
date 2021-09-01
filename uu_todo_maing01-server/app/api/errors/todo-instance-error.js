@@ -1,5 +1,5 @@
 "use strict";
-const TodoMainUseCaseError = require("./todo-instance-use-case-error.js");
+const TodoMainUseCaseError = require("./todo-use-case-error.js");
 
 const Init = {
   UC_CODE: `${TodoMainUseCaseError.ERROR_PREFIX}init/`,
@@ -29,15 +29,38 @@ const Init = {
     }
   },
 
-  CreateAwscFailed: class extends TodoMainUseCaseError {
+  TodoInstanceCreateDaoFailed: class extends TodoMainUseCaseError {
     constructor() {
       super(...arguments);
-      this.code = `${Init.UC_CODE}createAwscFailed`;
-      this.message = "Create uuAwsc failed.";
+      this.code = `${Init.UC_CODE}todoInstanceCreateDaoFailed`;
+      this.message = "TodoInstance DAO create failed.";
+    }
+  },
+
+
+};
+
+const Load = {
+  UC_CODE: `${TodoMainUseCaseError.ERROR_PREFIX}init/`,
+
+  TodoInstanceDoesNotExist: class extends TodoMainUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Init.UC_CODE}todoInstanceDoesNotExist`;
+      this.message = "TodoInstance does not exist.";
+    }
+  },
+
+  TodoInstanceIsNotInProperState: class extends TodoMainUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Init.UC_CODE}todoInstanceIsNotInProperState`;
+      this.message = "The application is not in proper state.\n";
     }
   },
 };
 
 module.exports = {
   Init,
+  Load
 };

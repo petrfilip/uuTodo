@@ -4,8 +4,14 @@
       "type": "uuAppObjectStore",
       "realization": "MongoDB",
       "schemaMap": {
-        "todoMain": {
-          "realization": "dao/TodoMainMongo"
+        "todoInstance": {
+          "realization": "dao/TodoInstanceMongo"
+        },
+        "list": {
+          "realization": "dao/ListMongo"
+        },
+        "item": {
+          "realization": "dao/ItemMongo"
         }
       }
     }

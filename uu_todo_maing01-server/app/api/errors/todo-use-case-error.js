@@ -1,7 +1,7 @@
 "use strict";
 const { UseCaseError } = require("uu_appg01_server").AppServer;
 
-class TodoInstanceUseCaseError extends UseCaseError {
+class TodoUseCaseError extends UseCaseError {
   static get ERROR_PREFIX() {
     return "uu-todo-main/";
   }
@@ -15,4 +15,4 @@ class TodoInstanceUseCaseError extends UseCaseError {
   }
 }
 
-module.exports = TodoInstanceUseCaseError;
+module.exports = TodoUseCaseError;
