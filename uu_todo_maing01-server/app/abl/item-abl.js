@@ -231,7 +231,16 @@ class ItemAbl {
     await ValidatorService.todoInstanceCheck(awid)
 
     // HDS 3 - System gets uuObject list from uuAppObjectStore (using list DAO get with awid and dtoIn.id).
-    const itemList = await Dao.item.list(awid, pageInfo)
+    let itemList;
+
+    if (dtoIn.listId && dtoIn.state) {
+      itemList = await Dao.item.listByListAndState(awid, dtoIn.listId, dtoIn.state, pageInfo)
+    } else if(dtoIn.state) {
+      itemList = await Dao.item.listByState(awid, dtoIn.state, pageInfo)
+    } else {
+      itemList = await Dao.item.list(awid, pageInfo)
+    }
+
 
     // HDS 4 - Returns properly filled dtoOut.
     return {...itemList, ...uuAppErrorMap};
