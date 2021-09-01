@@ -9,6 +9,7 @@ import Config from "./config/config";
 import Left from "./left";
 import Bottom from "./bottom";
 import Home from "../routes/home";
+import Items from "../routes/items";
 //@@viewOff:imports
 
 const STATICS = {
@@ -24,7 +25,7 @@ const ControlPanel = UU5.Common.Component.lazy(() => import("../routes/control-p
 const DEFAULT_USE_CASE = "home";
 const ROUTES = {
   "": DEFAULT_USE_CASE,
-  home: { component: <Home /> },
+  home: { component: <Items /> },
   about: { component: <About /> },
   "sys/uuAppWorkspace/initUve": { component: <InitAppWorkspace /> },
   controlPanel: { component: <ControlPanel /> },

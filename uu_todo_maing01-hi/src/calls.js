@@ -13,6 +13,25 @@ let Calls = {
     return response.data;
   },
 
+  // Items
+  listItems(dtoIn) {
+    console.log(dtoIn)
+    let commandUri = Calls.getCommandUri("item/list");
+    return Calls.call("get", commandUri, dtoIn);
+  },
+
+
+  // List
+
+  listLists(dtoIn) {
+    let commandUri = Calls.getCommandUri("list/list");
+    return Calls.call("get", commandUri, dtoIn);
+  },
+
+
+  // Origin
+
+
   loadDemoContent(dtoIn) {
     let commandUri = Calls.getCommandUri("loadDemoContent");
     return Calls.call("get", commandUri, dtoIn);

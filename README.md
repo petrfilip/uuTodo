@@ -83,6 +83,7 @@ const itemSchema = {
 TODO:
 - [ ] backend testy
 - [ ] frontend
+- [ ] problém se stránkováním z frontendu (chodí string místo int)
 
 ## Development and Usage
 

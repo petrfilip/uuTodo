@@ -167,7 +167,7 @@ class ListAbl {
     const pageInfo = {
       pageIndex: 0,
       pageSize: 500,
-      ...dtoIn.pageInfo
+      // ...dtoIn.pageInfo
     }
 
     // HDS 1 - Validation of dtoIn.
