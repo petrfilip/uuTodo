@@ -10,6 +10,7 @@ import Config from "./config/config.js";
 import Lsi from "../config/lsi.js";
 import ListProvider from "../bricks/list-provider";
 import Calls from "../calls";
+import List from "../bricks/list";
 //@@viewOff:imports
 
 const STATICS = {
@@ -33,9 +34,9 @@ export const Left = createVisualComponent({
       pageSize: 335,
       handlerMap: {
         load: Calls.listLists,
-        // createJoke: Calls.createItem,
-        // updateJoke: Calls.updateItem,
-        // deleteJoke: Calls.deleteItem,
+        createList: Calls.createList,
+        updateList: Calls.updateList,
+        deleteList: Calls.deleteList,
       },
     });
 
@@ -44,25 +45,20 @@ export const Left = createVisualComponent({
 
     // @@viewOn:private
     // state === "ready" && data && data.map(item => ({id: item.data.id, href: "home", content: item.data.name})) || []
+    function getListComponent(item) {
+      return <List list={item.data} onDelete={handlerMap.deleteList} onUpdate={handlerMap.updateList} onCreate={handlerMap.createList}/>
+    }
+
+    const menuItems = state === "ready" && data && data.map(item => ({id: item.data.id, href: "home?listId=" + item.data.id, content: getListComponent(item)})) || []
+    menuItems.push({id: "new", href: "#", content: getListComponent({})})
     //@@viewOff:private
 
     //@@viewOn:interface
     //@@viewOff:interface
 
-    function getContent(item) {
-      return <UU5.Bricks.Row>
-        <UU5.Bricks.Column colWidth="xs-12 s-10">
-          {item.data.name}
-        </UU5.Bricks.Column>
-        <UU5.Bricks.Column colWidth="xs-12 s-2">
-          <UU5.Bricks.TouchIcon icon="mdi-lead-pencil" content="Výchozí touch ikona"/>
-        </UU5.Bricks.Column>
-      </UU5.Bricks.Row>;
 
 
-    }
-
-//@@viewOn:render
+    //@@viewOn:render
     return (
       <Plus4U5.App.Left
         {...props}
@@ -79,7 +75,7 @@ export const Left = createVisualComponent({
         <Plus4U5.App.MenuTree
           borderBottom
           // NOTE Item "id" equals to useCase so that item gets automatically selected when route changes (see spa-autheticated.js).
-          items={state === "ready" && data && data.map(item => ({id: item.data.id, href: "home?listId=" + item.data.id, content: getContent(item)})) || []}
+          items={menuItems}
         />
 
       </Plus4U5.App.Left>

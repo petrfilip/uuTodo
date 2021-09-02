@@ -1,6 +1,5 @@
 const Errors = require("../api/errors/todo-instance-error.js");
-const { DaoFactory } = require("uu_appg01_server").ObjectStore;
-
+const {DaoFactory} = require("uu_appg01_server").ObjectStore;
 
 const Dao = {
   todoInstance: DaoFactory.getDao("todoInstance"),

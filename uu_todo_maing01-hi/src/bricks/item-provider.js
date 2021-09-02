@@ -9,20 +9,26 @@ const ItemProvider = createComponent({
   displayName: Config.TAG + "ItemProvider",
   //@@viewOff:statics
 
-  render({ children, listId }) {
+  render({children, listId}) {
 
     //@@viewOn:hooks
+
 
     let listDataValues = useDataList({
       pageSize: 300,
       handlerMap: {
-        load: () => Calls.listItems(listId),
+        load: () => Calls.listItems({listId: listId, state: "active"}),
         // load: Calls.listItems,
-        // createJoke: Calls.createItem,
+        createItem: Calls.createItem,
         // updateJoke: Calls.updateItem,
-        cancelItem: Calls.cancelItem,
+        setFinalState: Calls.setFinalState,
       },
     });
+
+    useEffect(() => {
+      listDataValues?.handlerMap?.load && listDataValues.handlerMap.load();
+    }, [listId]);
+
 
     let {state, data, newData, pendingData, errorData, handlerMap} = listDataValues;
     //@@viewOff:hooks

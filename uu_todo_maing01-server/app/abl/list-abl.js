@@ -142,7 +142,7 @@ class ListAbl {
 
     // HDS 4 - System loads all active items related to the list (using item DAO listByListAndState, where listId = dtoIn.id and state = active) and verifies that count of active items in the list is 0.
     const activeItemsByList = await Dao.item.listByListAndState(awid, dtoIn.id, 'active')
-    if (dtoIn.forceDelete) {
+    if (!dtoIn.forceDelete) {
       if (activeItemsByList.itemList.length > 0) {
         throw new Errors.Delete.ListContainsActiveItems({
           id: dtoIn.id,

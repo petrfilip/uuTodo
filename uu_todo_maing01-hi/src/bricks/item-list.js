@@ -32,7 +32,7 @@ const ItemList = createVisualComponent({
   },
   //@@viewOff:defaultProps
 
-  render({items, onLoad, onDetail, onUpdate, onDelete}) {
+  render({items, onDetail, onUpdate, onDelete}) {
 
     //@@viewOn:hooks
     const [showAll, setShowAll] = useState(false);

@@ -6,6 +6,7 @@ import Lsi from "./items.lsi";
 import ItemProvider from "../bricks/item-provider";
 import ItemsTitle from "../items-title";
 import ItemList from "../bricks/item-list";
+import AddItem from "../bricks/add-item";
 //@@viewOff:imports
 
 const Items = createVisualComponent({
@@ -82,14 +83,14 @@ const Items = createVisualComponent({
       return <UU5.Bricks.Loading/>;
     }
 
-    function renderReady(items, handleLoad) {
+    function renderReady(items, onCreate, listId) {
       return (
         <>
           <ItemsTitle items={items}/>
+          <AddItem onSave={onCreate} listId={listId} />
           {/*{isCreateAuthorized() && <JokeCreate onCreate={handleCreateItem}/>}*/}
           <ItemList
             items={items}
-            onLoad={handleLoad}
             onDetail={openDetail}
             onUpdate={openUpdateForm}
             onDelete={handleDeleteItem}
@@ -126,7 +127,7 @@ const Items = createVisualComponent({
               case "ready":
               case "readyNoData":
               default:
-                return renderReady(data, handlerMap.loadNext);
+                return renderReady(data, handlerMap.createItem, props.params.listId);
             }
           }}
         </ItemProvider>

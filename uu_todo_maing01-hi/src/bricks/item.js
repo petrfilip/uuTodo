@@ -42,6 +42,7 @@ const Item = createVisualComponent({
     function handleDetail() {
       onDetail(item);
     }
+
     //@@viewOff:private
 
     //@@viewOn:render
@@ -52,23 +53,23 @@ const Item = createVisualComponent({
 
     return (
       <UU5.Bricks.Row colorSchema={colorSchema} style="backgroundColor: pink">
-        <UU5.Bricks.Column colWidth="xs-12 s-1" >
+        <UU5.Bricks.Column colWidth="xs-12 s-1">
           <UU5.Forms.Checkbox
+            onChange={(setFinalState) => setFinalState({state: "completed", id: item.id})}
             value={item.state === "completed"}
-            // label={item.text}
             size="xl"
           />
+          {item.highPriority && <UU5.Bricks.Icon icon={"mdi-arrow-up"}/>}
+
         </UU5.Bricks.Column>
-        <UU5.Bricks.Column colWidth="xs-12 s-8" >
+        <UU5.Bricks.Column colWidth="xs-12 s-10">
           <UU5.Bricks.P>{item.text}</UU5.Bricks.P>
         </UU5.Bricks.Column>
 
-        <UU5.Bricks.Column colWidth="xs-12 s-3" >
-          <UU5.Bricks.TouchIcon icon="mdi-delete" content="Výchozí touch ikona" />
-          <UU5.Bricks.TouchIcon icon="mdi-lead-pencil" content="Výchozí touch ikona" />
+        <UU5.Bricks.Column colWidth="xs-12 s-1">
+          <UU5.Bricks.TouchIcon icon="mdi-lead-pencil"/>
         </UU5.Bricks.Column>
         <div className={Css.content()} onClick={handleDetail}>
-
 
 
         </div>

@@ -15,10 +15,20 @@ let Calls = {
 
   // Items
   listItems(dtoIn) {
-    console.log(dtoIn)
     let commandUri = Calls.getCommandUri("item/list");
     return Calls.call("get", commandUri, dtoIn);
   },
+
+  createItem(dtoIn) {
+    let commandUri = Calls.getCommandUri("item/create");
+    return Calls.call("post", commandUri, dtoIn);
+  },
+
+  setFinalState(dtoIn) {
+    let commandUri = Calls.getCommandUri("item/setFinalState");
+    return Calls.call("post", commandUri, dtoIn);
+  },
+
 
 
   // List
@@ -28,10 +38,21 @@ let Calls = {
     return Calls.call("get", commandUri, dtoIn);
   },
 
+  createList(dtoIn) {
+    let commandUri = Calls.getCommandUri("list/create");
+    return Calls.call("post", commandUri, dtoIn);
+  },
+
+  updateList(dtoIn) {
+    let commandUri = Calls.getCommandUri("list/update");
+    return Calls.call("post", commandUri, dtoIn);
+  },
+  deleteList(dtoIn) {
+    let commandUri = Calls.getCommandUri("list/delete");
+    return Calls.call("post", commandUri, dtoIn);
+  },
 
   // Origin
-
-
   loadDemoContent(dtoIn) {
     let commandUri = Calls.getCommandUri("loadDemoContent");
     return Calls.call("get", commandUri, dtoIn);
