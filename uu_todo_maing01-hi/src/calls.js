@@ -24,12 +24,20 @@ let Calls = {
     return Calls.call("post", commandUri, dtoIn);
   },
 
+  updateItem(dtoIn) {
+    let commandUri = Calls.getCommandUri("item/update");
+    return Calls.call("post", commandUri, dtoIn);
+  },
+
+  deleteItem(dtoIn) {
+    let commandUri = Calls.getCommandUri("item/delete");
+    return Calls.call("post", commandUri, dtoIn);
+  },
+
   setFinalState(dtoIn) {
     let commandUri = Calls.getCommandUri("item/setFinalState");
     return Calls.call("post", commandUri, dtoIn);
   },
-
-
 
   // List
 

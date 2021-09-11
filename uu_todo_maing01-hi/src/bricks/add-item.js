@@ -1,9 +1,7 @@
 //@@viewOn:imports
 import UU5 from "uu5g04";
-import Calls from "calls";
-import {createVisualComponent, useContext, useSession} from "uu5g04-hooks";
+import { createVisualComponent } from "uu5g04-hooks";
 import Config from "./config/config";
-import Css from "./item.css.js";
 //@@viewOff:imports
 
 const AddItem = createVisualComponent({
@@ -15,6 +13,8 @@ const AddItem = createVisualComponent({
   propTypes: {
     colorSchema: UU5.PropTypes.string,
     onSave: UU5.PropTypes.func,
+    onSaveDone: UU5.PropTypes.func,
+    onCancelClick: UU5.PropTypes.func,
     listId: UU5.PropTypes.string,
   },
   //@@viewOff:propTypes
@@ -22,12 +22,13 @@ const AddItem = createVisualComponent({
   //@@viewOn:defaultProps
   defaultProps: {
     colorSchema: "blue",
-    onSave: () => {
-    },
+    onSave: () => {},
+    onSaveDone: () => {},
+    onCancelClick: () => {},
   },
   //@@viewOff:defaultProps
 
-  render({onSave, listId}) {
+  render({ onSave, onCancelClick, onSaveDone, defaultValues, listId }) {
     //@@viewOn:private
     //@@viewOff:private
 
@@ -38,16 +39,16 @@ const AddItem = createVisualComponent({
     }
 
     return (
-      <UU5.Forms.Form onSave={({values}) => onSave({...values, listId})}>
-        <UU5.Forms.Text name="text" placeholder="Add a to do ..." required/>
+      <UU5.Forms.Form onSave={({ values }) => onSave({ ...defaultValues, ...values, listId })} onCancel={onCancelClick}>
+        <UU5.Forms.Text value={defaultValues?.text} name="text" placeholder="Add a to do ..." required />
         <UU5.Forms.SwitchSelector
-          items={["true", "false"].map(value => ({ value }))}
+          value={defaultValues?.highPriority ? String(defaultValues?.highPriority) : "false"}
+          items={["true", "false"].map((value) => ({ value }))}
           label="Is high priority task"
           name={"highPriority"}
         />
-        <UU5.Forms.Controls buttonSubmitProps={{content: <UU5.Bricks.Icon icon="mdi-check"/>}}/>
+        <UU5.Forms.Controls buttonSubmitProps={{ content: <UU5.Bricks.Icon icon="mdi-check" /> }} />
       </UU5.Forms.Form>
-
     );
     //@@viewOff:render
   },

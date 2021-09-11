@@ -1,5 +1,5 @@
 //@@viewOn:imports
-import {createComponent, useDataList, useState, useEffect} from "uu5g04-hooks";
+import { createComponent, useDataList, useState, useEffect } from "uu5g04-hooks";
 import Calls from "calls";
 import Config from "./config/config";
 //@@viewOff:imports
@@ -9,18 +9,17 @@ const ItemProvider = createComponent({
   displayName: Config.TAG + "ItemProvider",
   //@@viewOff:statics
 
-  render({children, listId}) {
-
+  render({ children, listId }) {
     //@@viewOn:hooks
-
 
     let listDataValues = useDataList({
       pageSize: 300,
       handlerMap: {
-        load: () => Calls.listItems({listId: listId, state: "active"}),
+        load: () => Calls.listItems({ listId: listId, state: "active" }),
         // load: Calls.listItems,
         createItem: Calls.createItem,
-        // updateJoke: Calls.updateItem,
+        updateItem: Calls.updateItem,
+        deleteItem: Calls.deleteItem,
         setFinalState: Calls.setFinalState,
       },
     });
@@ -29,8 +28,7 @@ const ItemProvider = createComponent({
       listDataValues?.handlerMap?.load && listDataValues.handlerMap.load();
     }, [listId]);
 
-
-    let {state, data, newData, pendingData, errorData, handlerMap} = listDataValues;
+    let { state, data, newData, pendingData, errorData, handlerMap } = listDataValues;
     //@@viewOff:hooks
 
     //@@viewOn:render

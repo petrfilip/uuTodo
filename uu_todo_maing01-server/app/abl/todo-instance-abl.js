@@ -1,13 +1,13 @@
 "use strict";
-const {Validator} = require("uu_appg01_server").Validation;
-const {DaoFactory, ObjectStoreError} = require("uu_appg01_server").ObjectStore;
-const {ValidationHelper} = require("uu_appg01_server").AppServer;
-const {Profile, AppClientTokenService, UuAppWorkspace, UuAppWorkspaceError} = require("uu_appg01_server").Workspace;
-const {UriBuilder} = require("uu_appg01_server").Uri;
-const {LoggerFactory} = require("uu_appg01_server").Logging;
-const {AppClient} = require("uu_appg01_server");
+const { Validator } = require("uu_appg01_server").Validation;
+const { DaoFactory, ObjectStoreError } = require("uu_appg01_server").ObjectStore;
+const { ValidationHelper } = require("uu_appg01_server").AppServer;
+const { Profile, AppClientTokenService, UuAppWorkspace, UuAppWorkspaceError } = require("uu_appg01_server").Workspace;
+const { UriBuilder } = require("uu_appg01_server").Uri;
+const { LoggerFactory } = require("uu_appg01_server").Logging;
+const { AppClient } = require("uu_appg01_server");
 const Errors = require("../api/errors/todo-instance-error.js");
-const {Dao} = require("./config");
+const { Dao } = require("./config");
 
 const WARNINGS = {
   initUnsupportedKeys: {
@@ -41,11 +41,10 @@ class TodoInstanceAbl {
         return await DaoFactory.getDao(schema).createSchema();
       } catch (e) {
         // A3
-        throw new Errors.Init.SchemaDaoCreateSchemaFailed({uuAppErrorMap}, {schema}, e);
+        throw new Errors.Init.SchemaDaoCreateSchemaFailed({ uuAppErrorMap }, { schema }, e);
       }
     });
     await Promise.all(schemaCreateResults);
-
 
     if (dtoIn.uuAppProfileAuthorities) {
       try {
@@ -53,7 +52,7 @@ class TodoInstanceAbl {
       } catch (e) {
         if (e instanceof UuAppWorkspaceError) {
           // A4
-          throw new Errors.Init.SetProfileFailed({uuAppErrorMap}, {role: dtoIn.uuAppProfileAuthorities}, e);
+          throw new Errors.Init.SetProfileFailed({ uuAppErrorMap }, { role: dtoIn.uuAppProfileAuthorities }, e);
         }
         throw e;
       }
@@ -63,13 +62,13 @@ class TodoInstanceAbl {
       ...dtoIn,
       awid,
       state: "active",
-    }
+    };
 
-    let createdTodoInstance = {}
+    let createdTodoInstance = {};
     try {
       createdTodoInstance = await Dao.todoInstance.create(newTodoInstance);
     } catch (e) {
-      throw new Errors.Init.TodoInstanceCreateDaoFailed({uuAppErrorMap}, e);
+      throw new Errors.Init.TodoInstanceCreateDaoFailed({ uuAppErrorMap }, e);
     }
 
     return {
@@ -86,14 +85,14 @@ class TodoInstanceAbl {
     try {
       todoInstance = await Dao.todoInstance.getByAwid(awid);
     } catch (e) {
-      throw new Errors.Load.TodoInstanceDoesNotExist({uuAppErrorMap}, e);
+      throw new Errors.Load.TodoInstanceDoesNotExist({ uuAppErrorMap }, e);
     }
 
     // HDS 2 - Loads all authorized profiles of the logged user from Use Case Context (authorizedProfileList).
     // HDS 3 - Returns properly filled dtoOut.
     return {
       authorizedProfileList: authorizationResult.getIdentityProfiles(),
-      ...todoInstance
+      ...todoInstance,
     };
   }
 }

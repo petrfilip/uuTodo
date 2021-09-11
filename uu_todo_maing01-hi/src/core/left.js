@@ -2,7 +2,7 @@
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 
-import {createVisualComponent, useDataList} from "uu5g04-hooks";
+import { createVisualComponent, useDataList } from "uu5g04-hooks";
 import Plus4U5 from "uu_plus4u5g01";
 import "uu_plus4u5g01-app";
 
@@ -40,23 +40,37 @@ export const Left = createVisualComponent({
       },
     });
 
-    let {state, data, newData, pendingData, errorData, handlerMap} = listDataValues;
+    let { state, data, newData, pendingData, errorData, handlerMap } = listDataValues;
     //@@viewOff:hooks
 
     // @@viewOn:private
     // state === "ready" && data && data.map(item => ({id: item.data.id, href: "home", content: item.data.name})) || []
     function getListComponent(item) {
-      return <List list={item.data} onDelete={handlerMap.deleteList} onUpdate={handlerMap.updateList} onCreate={handlerMap.createList}/>
+      return (
+        <List
+          key={item?.id}
+          list={item}
+          onDelete={handlerMap.deleteList}
+          onUpdate={handlerMap.updateList}
+          onCreate={handlerMap.createList}
+        />
+      );
     }
 
-    const menuItems = state === "ready" && data && data.map(item => ({id: item.data.id, href: "home?listId=" + item.data.id, content: getListComponent(item)})) || []
-    menuItems.push({id: "new", href: "#", content: getListComponent({})})
+    const menuItems =
+      (state === "ready" &&
+        data &&
+        data.map((item) => ({
+          id: item.data.id,
+          href: "home?listId=" + item.data.id,
+          content: getListComponent(item.data),
+        }))) ||
+      [];
+    menuItems.push({ id: "new", href: "#", content: getListComponent() });
     //@@viewOff:private
 
     //@@viewOn:interface
     //@@viewOff:interface
-
-
 
     //@@viewOn:render
     return (
@@ -69,7 +83,7 @@ export const Left = createVisualComponent({
           companyLogo: Plus4U5.Environment.basePath + "assets/img/unicorn-logo.svg",
           generation: "1",
         }}
-        aboutItems={[{content: <UU5.Bricks.Lsi lsi={Lsi.left.about}/>, href: "about"}]}
+        aboutItems={[{ content: <UU5.Bricks.Lsi lsi={Lsi.left.about} />, href: "about" }]}
         helpHref={null}
       >
         <Plus4U5.App.MenuTree
@@ -77,7 +91,6 @@ export const Left = createVisualComponent({
           // NOTE Item "id" equals to useCase so that item gets automatically selected when route changes (see spa-autheticated.js).
           items={menuItems}
         />
-
       </Plus4U5.App.Left>
     );
     //@@viewOff:render

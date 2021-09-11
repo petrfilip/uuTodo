@@ -80,6 +80,25 @@ const itemSchema = {
 - [x] list/delete
 - [x] list/list
 
+### GUI
+- [x] View lists
+- [x] Add a list
+- [x] Delete a list
+- [x] Delete a list - confirm modal
+- [x] Edit a list
+- [x] View tasks
+- [x] Add a task
+- [x] Delete a task
+- [x] Edit a task
+- [x] Change task state
+- [ ] Filter tasks
+- [ ] Styling
+
+
+
+
+
+
 TODO:
 - [ ] backend testy
 - [ ] frontend
