@@ -31,15 +31,15 @@ class ListAbl {
       dtoIn,
       validationResult,
       WARNINGS.initUnsupportedKeys.code,
-      Errors.List.InvalidDtoIn
+      Errors.Create.InvalidDtoIn
     );
 
     // HDS 2 - System checks existence and state of the todoInstance uuObject.
     await ValidatorService.todoInstanceCheck(awid);
 
     // HDS 3 - System verifies that the inserted date is not from the past (it cannot be older than today's date).
-    if (dtoIn.deadline && dtoIn.deadline <= new Date()) {
-      throw new Errors.Create.DeadlineDateIsFromThePast({ deadline: dtoIn.deadline }, e);
+    if (dtoIn.deadline && new Date(dtoIn.deadline) <= new Date()) {
+      throw new Errors.Create.DeadlineDateIsFromThePast({ deadline: dtoIn.deadline });
     }
 
     let createdList = {
@@ -67,7 +67,7 @@ class ListAbl {
       dtoIn,
       validationResult,
       WARNINGS.initUnsupportedKeys.code,
-      Errors.List.InvalidDtoIn
+      Errors.Get.InvalidDtoIn
     );
 
     // HDS 2 - System checks existence and state of the todoInstance uuObject.

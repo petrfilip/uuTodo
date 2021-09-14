@@ -1,9 +1,8 @@
 "use strict";
 const TodoUseCaseError = require("./todo-use-case-error.js");
 
-
 const Create = {
-  UC_CODE: `${TodoUseCaseError.ERROR_PREFIX}create/`,
+  UC_CODE: `${TodoUseCaseError.ERROR_PREFIX}list/create/`,
 
   InvalidDtoIn: class extends TodoUseCaseError {
     constructor() {
@@ -28,11 +27,18 @@ const Create = {
       this.message = "Creating list by list DAO create failed.";
     }
   },
-
 };
 
 const Get = {
-  UC_CODE: `${TodoUseCaseError.ERROR_PREFIX}get/`,
+  UC_CODE: `${TodoUseCaseError.ERROR_PREFIX}list/get/`,
+
+  InvalidDtoIn: class extends TodoUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Get.UC_CODE}invalidDtoIn`;
+      this.message = "DtoIn is not valid.";
+    }
+  },
 
   ListDoesNotExist: class extends TodoUseCaseError {
     constructor() {
@@ -44,7 +50,7 @@ const Get = {
 };
 
 const Delete = {
-  UC_CODE: `${TodoUseCaseError.ERROR_PREFIX}delete/`,
+  UC_CODE: `${TodoUseCaseError.ERROR_PREFIX}list/delete/`,
 
   ListContainsActiveItems: class extends TodoUseCaseError {
     constructor() {
@@ -64,7 +70,7 @@ const Delete = {
 };
 
 const List = {
-  UC_CODE: `${TodoUseCaseError.ERROR_PREFIX}list/`,
+  UC_CODE: `${TodoUseCaseError.ERROR_PREFIX}list/list/`,
 
   InvalidDtoIn: class extends TodoUseCaseError {
     constructor() {
@@ -76,7 +82,7 @@ const List = {
 };
 
 const Update = {
-  UC_CODE: `${TodoUseCaseError.ERROR_PREFIX}update/`,
+  UC_CODE: `${TodoUseCaseError.ERROR_PREFIX}list/update/`,
 
   InvalidDtoIn: class extends TodoUseCaseError {
     constructor() {
@@ -107,5 +113,5 @@ module.exports = {
   Create,
   Get,
   Delete,
-  Update
+  Update,
 };

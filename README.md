@@ -102,7 +102,8 @@ const itemSchema = {
 
 TODO:
 - [ ] backend testy
-- [ ] frontend
+- [ ] mock data
+- [ ] deadline do GUI listu
 - [ ] problém se stránkováním z frontendu (chodí string místo int)
 
 ## Development and Usage
