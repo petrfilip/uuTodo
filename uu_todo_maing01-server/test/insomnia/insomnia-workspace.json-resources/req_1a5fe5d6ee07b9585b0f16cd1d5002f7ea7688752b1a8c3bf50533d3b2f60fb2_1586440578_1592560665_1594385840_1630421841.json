@@ -1,0 +1,40 @@
+{
+  "_id": "req_1a5fe5d6ee07b9585b0f16cd1d5002f7ea7688752b1a8c3bf50533d3b2f60fb2_1586440578_1592560665_1594385840_1630421841",
+  "parentId": "fld_a35021351f97d6243fdef1ab9ff051e88fbd893333960fccd0c794eb4bbee29e_1586440578_1592560665_1594385840_1630421841",
+  "modified": 1600000000000,
+  "created": 1600000000000,
+  "url": "{{ host  }}/{{ contextPath  }}/{{ awid  }}/uu-app-binarystore/listBinaryVersions",
+  "name": "uu-app-binarystore/listBinaryVersions",
+  "description": "#### uuCmd documentation\nhttps://uuapp.plus4u.net/uu-bookkit-maing01/34df77ebe0a04adda6dcd62d32c4f513/book/page?code=listBinaryVersions_00",
+  "method": "GET",
+  "body": {
+    "mimeType": "application/json",
+    "text": [
+      "{",
+      "  \"code\": \"...\",",
+      "  \"pageInfo\": {}",
+      "}"
+    ]
+  },
+  "parameters": [],
+  "headers": [
+    {
+      "id": "pair_216b98128c704d42b3159d954b349dde_1586440578_1592560665_1594385840_1630421841",
+      "name": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "authentication": {
+    "token": "{{ token  }}",
+    "type": "bearer"
+  },
+  "metaSortKey": -1545222476705.0488,
+  "isPrivate": false,
+  "settingStoreCookies": true,
+  "settingSendCookies": true,
+  "settingDisableRenderRequestBody": false,
+  "settingEncodeUrl": true,
+  "settingRebuildPath": true,
+  "settingFollowRedirects": "global",
+  "_type": "request"
+}

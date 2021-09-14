@@ -21,7 +21,6 @@ class TodoInstanceController {
   list(ucEnv) {
     return ListAbl.list(ucEnv.getUri(), ucEnv.getDtoIn(), ucEnv.getSession());
   }
-
 }
 
 module.exports = new TodoInstanceController();

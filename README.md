@@ -58,27 +58,28 @@ const itemSchema = {
 ### API
 
 **todoInstance**
-- [x] sys/uuAppWorkspace/init
-- [x] sys/uuAppWorkspace/load
-- [ ] todoInstance/update
-- [ ] todoInstance/setState
+- [x] **POST** - sys/uuAppWorkspace/init - Initializes application during installation.
+- [x] **GET** - sys/uuAppWorkspace/load - Loads the application configuration for logged user.
+- [x] **POST** - todoInstance/update - Updates application basic information.
+- [x] **POST** - todoInstance/setState - Sets application state. Two options are possible: active or suspended.
+
 
 **list**
  
-- [x] list/create
-- [x] list/get
-- [x] list/update
-- [x] list/delete
-- [x] list/list
+- [x] **POST** - list/create - Creates a new (empty) list.
+- [x] **GET** -list/get - Returns uuObject list.
+- [x] **POST** - list/update - Updates uuObject list.
+- [x] **POST** - list/delete - Deletes the given list.
+- [x] **GET** -list/list - Returns a list of all todo lists.
 
 **item**
 
-- [x] list/create
-- [x] list/get
-- [x] list/update
-- [x] list/setFinalState
-- [x] list/delete
-- [x] list/list
+- [x] **POST** - list/create - Creates a new item in the list.
+- [x] **GET** -list/get - Returns uuObject item
+- [x] **POST** - list/update - Updates uuObject item
+- [x] **POST** - list/setFinalState - Item state can be changed from active state to cancelled or completed state.
+- [x] **POST** - list/delete - Deletes the item. Only active or cancelled items can be deleted.
+- [x] **GET** -list/list - Returns a list of items by given criteria
 
 ### GUI
 - [x] View lists

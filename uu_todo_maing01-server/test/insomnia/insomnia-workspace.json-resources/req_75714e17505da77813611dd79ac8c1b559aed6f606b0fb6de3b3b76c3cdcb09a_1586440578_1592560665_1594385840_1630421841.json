@@ -1,0 +1,82 @@
+{
+  "_id": "req_75714e17505da77813611dd79ac8c1b559aed6f606b0fb6de3b3b76c3cdcb09a_1586440578_1592560665_1594385840_1630421841",
+  "parentId": "fld_a35021351f97d6243fdef1ab9ff051e88fbd893333960fccd0c794eb4bbee29e_1586440578_1592560665_1594385840_1630421841",
+  "modified": 1600000000000,
+  "created": 1600000000000,
+  "url": "{{ host  }}/{{ contextPath  }}/{{ awid  }}/uu-app-binarystore/createBinary",
+  "name": "uu-app-binarystore/createBinary",
+  "description": "#### uuCmd documentation\nhttps://uuapp.plus4u.net/uu-bookkit-maing01/34df77ebe0a04adda6dcd62d32c4f513/book/page?code=createBinary_00\n\n#### Input\n```javascript\n{\n  code: \"...\", //externally specified or generated code (3-64 charecters)\n  name: \"...\", //user name of binary; It is uu5String limited to 255 characters\n  description: \"...\", //user description of binary; It is uu5String limited to 4000 characters\n  versionName: \"...\", //user name of binary version; It is uu5String limited to 255 characters\n  filename: \"...\" //name of the uploaded file; \n                  //if not set it is obtained from http header or the default value \"defaultName\" is used\n  contentType: \"...\", //content type of the uploaded file;\n                      //if not set it is obtained from http header or the default value \"application/octet-stream\" is used\n  data: ... //binary data; required\n};\n```\n#### Validation schema\n```javascript\nshape({\n  code: code(),\n  name: uu5String(255),\n  description: uu5String(4000),\n  versionName: uu5String(255),\n  filename: string(255), \n  contentType: string(256),\n  data: binary().isRequired()\n})\n```\n#### Output\n```javascript\n{\n  id: \"...\", //generated unique code\n  awid: \"...\", //app module id - unique code specified externally\n  sys: {},\n  name: \"...\", //user name of binary; It is uu5String limited to 255 characters\n  code: \"...\", //identifier of the binary (all versions of binary have same code)\n  description: \"...\", //user description of binary\n  versionName: \"...\", //user name of binary version\n  filename: \"...\" //name of the uploaded file\n  contentType: \"...\", //content type of the uploaded file\n  uuAppErrorMap: {} //uuApp standard errorMap\n};\n```",
+  "method": "POST",
+  "body": {
+    "mimeType": "multipart/form-data",
+    "params": [
+      {
+        "disabled": false,
+        "id": "pair_c708b2ef8ccf4646b36cbe19bea8e5f3_1586440578_1592560665_1594385840_1630421841",
+        "name": "code",
+        "value": ""
+      },
+      {
+        "disabled": false,
+        "id": "pair_a0011c96214842a9b5e1beed8e0da3cf_1586440578_1592560665_1594385840_1630421841",
+        "name": "name",
+        "value": ""
+      },
+      {
+        "disabled": true,
+        "id": "pair_ffbee43fa1bf4041b7337ab2e5a147b5_1586440578_1592560665_1594385840_1630421841",
+        "name": "description",
+        "value": ""
+      },
+      {
+        "disabled": true,
+        "id": "pair_edd1b8c9bdfa41f09e0231e6ad44c3d7_1586440578_1592560665_1594385840_1630421841",
+        "name": "versionName",
+        "value": ""
+      },
+      {
+        "disabled": true,
+        "id": "pair_72500b275fff4b6296edf07af2612a1d_1586440578_1592560665_1594385840_1630421841",
+        "multiline": false,
+        "name": "filename",
+        "type": "text",
+        "value": ""
+      },
+      {
+        "disabled": true,
+        "id": "pair_f6e8393690a34a17871fd3017fb992a2_1586440578_1592560665_1594385840_1630421841",
+        "multiline": false,
+        "name": "contentType",
+        "type": "text",
+        "value": ""
+      },
+      {
+        "id": "pair_3369f7e5569a4fb3bb58d1c0df3d6945_1586440578_1592560665_1594385840_1630421841",
+        "name": "data",
+        "type": "file",
+        "value": ""
+      }
+    ]
+  },
+  "parameters": [],
+  "headers": [
+    {
+      "id": "pair_216b98128c704d42b3159d954b349dde_1586440578_1592560665_1594385840_1630421841",
+      "name": "Content-Type",
+      "value": "multipart/form-data"
+    }
+  ],
+  "authentication": {
+    "token": "{{ token  }}",
+    "type": "bearer"
+  },
+  "metaSortKey": -1549535903047,
+  "isPrivate": false,
+  "settingStoreCookies": true,
+  "settingSendCookies": true,
+  "settingDisableRenderRequestBody": false,
+  "settingEncodeUrl": true,
+  "settingRebuildPath": true,
+  "settingFollowRedirects": "global",
+  "_type": "request"
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "req_fd377d9a694b41cb8b3f8dac417674da_1630421841",
+  "parentId": "fld_65a4cee2c1094d40a21d7a675ddfd13e_1630421841",
+  "modified": 1600000000000,
+  "created": 1600000000000,
+  "url": "{{ host  }}/{{ contextPath  }}/{{asid}}/sys/uuSubAppInstance/productInfo/get",
+  "name": "sys/uuSubAppInstance/productInfo/get",
+  "description": "uuCmd documentation\n\nhttps://uuapp.plus4u.net/uu-bookkit-maing01/d11a43aa3a214083b84a4e4103a4f635/book/page?code=11393797\n\n\n",
+  "method": "GET",
+  "body": {
+    "mimeType": "application/json",
+    "text": [
+      "{",
+      "",
+      "}"
+    ]
+  },
+  "parameters": [],
+  "headers": [
+    {
+      "id": "pair_1362c7d2a9d04397a53ea39ad1ce0279_1592560665_1594385840_1630421841",
+      "name": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "authentication": {
+    "token": "{{ token  }}",
+    "type": "bearer"
+  },
+  "metaSortKey": -1594391125436.5,
+  "isPrivate": false,
+  "settingStoreCookies": true,
+  "settingSendCookies": true,
+  "settingDisableRenderRequestBody": false,
+  "settingEncodeUrl": true,
+  "settingRebuildPath": true,
+  "settingFollowRedirects": "global",
+  "_type": "request"
+}

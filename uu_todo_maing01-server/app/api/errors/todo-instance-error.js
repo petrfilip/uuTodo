@@ -36,8 +36,6 @@ const Init = {
       this.message = "TodoInstance DAO create failed.";
     }
   },
-
-
 };
 
 const Load = {
@@ -60,7 +58,49 @@ const Load = {
   },
 };
 
+const Update = {
+  UC_CODE: `${TodoMainUseCaseError.ERROR_PREFIX}update/`,
+
+  InvalidDtoIn: class extends TodoMainUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Init.UC_CODE}invalidDtoIn`;
+      this.message = "DtoIn is not valid.";
+    }
+  },
+
+  TodoInstanceDaoUpdateByAwidFailed: class extends TodoMainUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Init.UC_CODE}todoInstanceDaoUpdateByAwidFailed`;
+      this.message = "The update of todoInstance by todoInstance DAO updateByAwid failed.\n";
+    }
+  },
+};
+
+const SetState = {
+  UC_CODE: `${TodoMainUseCaseError.ERROR_PREFIX}update/`,
+
+  InvalidDtoIn: class extends TodoMainUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Init.UC_CODE}invalidDtoIn`;
+      this.message = "DtoIn is not valid.";
+    }
+  },
+
+  TodoInstanceDaoUpdateByAwidFailed: class extends TodoMainUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Init.UC_CODE}todoInstanceDaoUpdateByAwidFailed`;
+      this.message = "The update of todoInstance by todoInstance DAO updateByAwid failed.\n";
+    }
+  },
+};
+
 module.exports = {
   Init,
-  Load
+  Load,
+  Update,
+  SetState,
 };

@@ -1,0 +1,26 @@
+{
+  "_id": "req_e835fdd939984eba95d7e90e73676982_1592560665_1594385840_1630421841",
+  "parentId": "fld_63fd4fc27f0c46b781a67e30057f48d0_1592560665_1594385840_1630421841",
+  "modified": 1600000000000,
+  "created": 1600000000000,
+  "url": "{{ host  }}/{{ contextPath  }}/{{ awid  }}/sys/uuAppWorkspace/setRestrictedSysState",
+  "name": "sys/uuAppWorkspace/setRestrictedSysState",
+  "description": "uuCmd documentation\n\nhttps://uuapp.plus4u.net/uu-bookkit-maing01/d11a43aa3a214083b84a4e4103a4f635/book/page?code=66032167\n\n",
+  "method": "POST",
+  "body": {},
+  "parameters": [],
+  "headers": [],
+  "authentication": {
+    "token": "{{ token  }}",
+    "type": "bearer"
+  },
+  "metaSortKey": -1529485542192.9268,
+  "isPrivate": false,
+  "settingStoreCookies": true,
+  "settingSendCookies": true,
+  "settingDisableRenderRequestBody": false,
+  "settingEncodeUrl": true,
+  "settingRebuildPath": true,
+  "settingFollowRedirects": "global",
+  "_type": "request"
+}

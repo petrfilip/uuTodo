@@ -1,0 +1,25 @@
+{
+  "_id": "env_a97c02eedb954400491a75fa0529bc3027d901e9055b7a7c229426a147c798eb_1586440578_1592560665_1594385840_1630421841",
+  "parentId": "env_e1d16f63ed1a7df50e96bf42827976fadec4ed1ffecc124cf70c30d56b5de959_1586440578_1592560665_1594385840_1630421841",
+  "modified": 1600000000000,
+  "created": 1600000000000,
+  "name": "localhost",
+  "data": {
+    "asid": "11111111111111111111111111111111",
+    "awid": "22222222222222222222222222222222",
+    "awidLicenseOwner": "22-2061-1",
+    "host": "http://localhost:8080"
+  },
+  "dataPropertyOrder": {
+    "&": [
+      "asid",
+      "awid",
+      "awidLicenseOwner",
+      "host"
+    ]
+  },
+  "color": "#7d69cb",
+  "isPrivate": false,
+  "metaSortKey": 2,
+  "_type": "environment"
+}

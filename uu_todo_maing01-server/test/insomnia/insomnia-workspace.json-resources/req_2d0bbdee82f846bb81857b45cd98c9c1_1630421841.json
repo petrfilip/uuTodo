@@ -1,0 +1,62 @@
+{
+  "_id": "req_2d0bbdee82f846bb81857b45cd98c9c1_1630421841",
+  "parentId": "fld_65a4cee2c1094d40a21d7a675ddfd13e_1630421841",
+  "modified": 1600000000000,
+  "created": 1600000000000,
+  "url": "{{ host  }}/{{ contextPath  }}/{{asid}}/sys/uuSubAppInstance/productInfo/set",
+  "name": "sys/uuSubAppInstance/productInfo/set",
+  "description": "uuCmd documentation\n\nhttps://uuapp.plus4u.net/uu-bookkit-maing01/d11a43aa3a214083b84a4e4103a4f635/book/page?code=53862166\n\n\n\n",
+  "method": "POST",
+  "body": {
+    "mimeType": "application/json",
+    "text": [
+      "{  ",
+      "\t\"name\": {            ",
+      "    \"en\": \"...\",      ",
+      "    \"cs\": \"...\"",
+      "  },",
+      "  \"desc\": {                 ",
+      "    \"en\": \"...\",",
+      "    \"cs\": \"...\"",
+      "  },",
+      "  \"tags\": [\"award\"],     ",
+      "  \"logo\": {            ",
+      "    \"colorSchema\": \"blue\",            ",
+      "    \"backgroundColor\": \"#ff0000\",    ",
+      "    \"backgroundColorTo\": \"#ff0000\",  ",
+      "    \"textColor\": \"#ff0000\",           ",
+      "    \"backgroundImageSrc\": \"https://\",",
+      "    \"title\": {                          ",
+      "      \"en\": \"...\",       ",
+      "      \"cs\": \"...\"",
+      "    },",
+      "    \"subtitle\": {                             ",
+      "      \"cs\": \"čeština\",",
+      "      \"en\": \"english\"",
+      "    }     ",
+      "\t}",
+      "}"
+    ]
+  },
+  "parameters": [],
+  "headers": [
+    {
+      "id": "pair_1362c7d2a9d04397a53ea39ad1ce0279_1592560665_1594385840_1630421841",
+      "name": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "authentication": {
+    "token": "{{ token  }}",
+    "type": "bearer"
+  },
+  "metaSortKey": -1594022158288.375,
+  "isPrivate": false,
+  "settingStoreCookies": true,
+  "settingSendCookies": true,
+  "settingDisableRenderRequestBody": false,
+  "settingEncodeUrl": true,
+  "settingRebuildPath": true,
+  "settingFollowRedirects": "global",
+  "_type": "request"
+}

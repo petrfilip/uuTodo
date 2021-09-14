@@ -1,11 +1,11 @@
 {
   "{asid}": {
-    "profileList": ["AsidAuthorities", "AsidExecutives", "AsidLicenseOwner", "Public"],
+    "profileList": ["AsidAuthorities", "AsidExecutives", "AsidLicenseOwner", "Readers", "Public"],
     "useCaseMap": {
     }
   },
   "*": {
-    "profileList": ["Authorities", "Executives", "AwidLicenseOwner", "Public"],
+    "profileList": ["Authorities", "Executives", "AwidLicenseOwner", "Readers", "Public"],
     "useCaseMap": {
       "sys/uuAppWorkspace/init": {
         "sysStateList": ["created"],
@@ -13,55 +13,63 @@
       },
       "sys/uuAppWorkspace/load": {
         "sysStateList": ["active"],
+        "profileList": ["Authorities", "Executives","AwidLicenseOwner", "Readers"]
+      },
+      "todoInstance/update": {
+        "sysStateList": ["active"],
+        "profileList": ["AwidLicenseOwner"]
+      },
+      "todoInstance/setState": {
+        "sysStateList": ["active"],
         "profileList": ["AwidLicenseOwner"]
       },
 
 
       "list/create": {
         "sysStateList": ["active"],
-        "profileList": ["Authorities", "Executives", ",AwidLicenseOwner"]
+        "profileList": ["Authorities", "Executives"]
       },
       "list/get": {
         "sysStateList": ["active"],
-        "profileList": ["Authorities", "Executives", ",AwidLicenseOwner"]
+        "profileList": ["Authorities", "Executives", "Readers"]
       },
       "list/update": {
         "sysStateList": ["active"],
-        "profileList": ["Authorities", "Executives", ",AwidLicenseOwner"]
+        "profileList": ["Authorities", "Executives"]
       },
       "list/delete": {
         "sysStateList": ["active"],
-        "profileList": ["Authorities", "Executives", ",AwidLicenseOwner"]
+        "profileList": ["Authorities", "Executives"]
       },
       "list/list": {
         "sysStateList": ["active"],
-        "profileList": ["Authorities", "Executives", ",AwidLicenseOwner"]
+        "profileList": ["Authorities", "Executives", "Readers"]
       },
 
 
       "item/create": {
         "sysStateList": ["active"],
-        "profileList": ["Authorities", "Executives", ",AwidLicenseOwner"]
+        "profileList": ["Authorities", "Executives"]
       },
       "item/get": {
         "sysStateList": ["active"],
-        "profileList": ["Authorities", "Executives", ",AwidLicenseOwner"]
+        "profileList": ["Authorities", "Executives", "Readers"]
       },
       "item/update": {
         "sysStateList": ["active"],
-        "profileList": ["Authorities", "Executives", ",AwidLicenseOwner"]
+        "profileList": ["Authorities", "Executives"]
       },
       "item/delete": {
         "sysStateList": ["active"],
-        "profileList": ["Authorities", "Executives", ",AwidLicenseOwner"]
+        "profileList": ["Authorities", "Executives"]
       },
       "item/list": {
         "sysStateList": ["active"],
-        "profileList": ["Authorities", "Executives", ",AwidLicenseOwner"]
+        "profileList": ["Authorities", "Executives", "Readers"]
       },
       "item/setFinalState": {
         "sysStateList": ["active"],
-        "profileList": ["Authorities", "Executives", ",AwidLicenseOwner"]
+        "profileList": ["Authorities", "Executives"]
       },
 
       "defaultUve": {

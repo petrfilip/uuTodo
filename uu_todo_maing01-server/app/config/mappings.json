@@ -11,6 +11,16 @@
         "httpMethod": "GET",
         "type": "CMD"
       },
+      "todoInstance/update": {
+        "realization": "api/controllers/TodoInstanceController.update",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "todoInstance/setState": {
+        "realization": "api/controllers/TodoInstanceController.setState",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
 
 
       "list/create": {

@@ -1,0 +1,39 @@
+{
+  "_id": "req_0874b1f8e6d84a84991642593b258b59_1592560665_1594385840_1630421841",
+  "parentId": "fld_63fd4fc27f0c46b781a67e30057f48d0_1592560665_1594385840_1630421841",
+  "modified": 1600000000000,
+  "created": 1600000000000,
+  "url": "{{ host  }}/{{ contextPath  }}/{{ asid  }}/sys/uuAppWorkspace/suspend",
+  "name": "sys/uuAppWorkspace/suspend",
+  "description": "uuCmd documentation\n\nhttps://uuapp.plus4u.net/uu-bookkit-maing01/d11a43aa3a214083b84a4e4103a4f635/book/page?code=49149093\n",
+  "method": "POST",
+  "body": {
+    "mimeType": "application/json",
+    "text": [
+      "{",
+      "\t\"awid\": \"{{ awid  }}\"",
+      "}"
+    ]
+  },
+  "parameters": [],
+  "headers": [
+    {
+      "id": "pair_e8eeef90a3b34e7c9fd6e49e5eb2bf0e_1592560665_1594385840_1630421841",
+      "name": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "authentication": {
+    "token": "{{ token  }}",
+    "type": "bearer"
+  },
+  "metaSortKey": -1529485542167.9268,
+  "isPrivate": false,
+  "settingStoreCookies": true,
+  "settingSendCookies": true,
+  "settingDisableRenderRequestBody": false,
+  "settingEncodeUrl": true,
+  "settingRebuildPath": true,
+  "settingFollowRedirects": "global",
+  "_type": "request"
+}

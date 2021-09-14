@@ -1,0 +1,25 @@
+{
+  "_id": "env_568085226070ff18172e9d9343d685da8b02d3af489c053d376dfe626f9e355d_1586440578_1592560665_1594385840_1630421841",
+  "parentId": "env_e1d16f63ed1a7df50e96bf42827976fadec4ed1ffecc124cf70c30d56b5de959_1586440578_1592560665_1594385840_1630421841",
+  "modified": 1600000000000,
+  "created": 1600000000000,
+  "name": "uuCloud - development",
+  "data": {
+    "asid": "<asid>",
+    "awid": "<awid>",
+    "awidLicenseOwner": "1-1",
+    "host": "https://uuapp.plus4u.net"
+  },
+  "dataPropertyOrder": {
+    "&": [
+      "asid",
+      "awid",
+      "awidLicenseOwner",
+      "host"
+    ]
+  },
+  "color": "#ff8040",
+  "isPrivate": false,
+  "metaSortKey": 1,
+  "_type": "environment"
+}

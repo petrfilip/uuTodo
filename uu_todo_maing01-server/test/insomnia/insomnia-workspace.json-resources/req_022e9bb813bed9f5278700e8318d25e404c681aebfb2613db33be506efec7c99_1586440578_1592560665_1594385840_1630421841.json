@@ -1,0 +1,39 @@
+{
+  "_id": "req_022e9bb813bed9f5278700e8318d25e404c681aebfb2613db33be506efec7c99_1586440578_1592560665_1594385840_1630421841",
+  "parentId": "fld_a35021351f97d6243fdef1ab9ff051e88fbd893333960fccd0c794eb4bbee29e_1586440578_1592560665_1594385840_1630421841",
+  "modified": 1600000000000,
+  "created": 1600000000000,
+  "url": "{{ host  }}/{{ contextPath  }}/{{ awid  }}/uu-app-binarystore/deleteBinaryVersion",
+  "name": "uu-app-binarystore/deleteBinaryVersion",
+  "description": "#### uuCmd documentation\nhttps://uuapp.plus4u.net/uu-bookkit-maing01/34df77ebe0a04adda6dcd62d32c4f513/book/page?code=deleteBinaryVersion_00",
+  "method": "POST",
+  "body": {
+    "mimeType": "application/json",
+    "text": [
+      "{",
+      "  \"id\": \"...\"",
+      "}"
+    ]
+  },
+  "parameters": [],
+  "headers": [
+    {
+      "id": "pair_216b98128c704d42b3159d954b349dde_1586440578_1592560665_1594385840_1630421841",
+      "name": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "authentication": {
+    "token": "{{ token  }}",
+    "type": "bearer"
+  },
+  "metaSortKey": -1545230917852.0977,
+  "isPrivate": false,
+  "settingStoreCookies": true,
+  "settingSendCookies": true,
+  "settingDisableRenderRequestBody": false,
+  "settingEncodeUrl": true,
+  "settingRebuildPath": true,
+  "settingFollowRedirects": "global",
+  "_type": "request"
+}

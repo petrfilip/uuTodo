@@ -1,0 +1,44 @@
+{
+  "_id": "req_7ec157ee95e789e136af4055051cbf3be1ecacf78ccee4d01bdb7aa1bdaa4fef_1586440578_1592560665_1594385840_1630421841",
+  "parentId": "fld_7376f54ddf551a010e0d6dde320f523ce0558bab8bd150abed653aef56cdae7b_1586440578_1592560665_1594385840_1630421841",
+  "modified": 1600000000000,
+  "created": 1600000000000,
+  "url": "{{ host  }}/{{ contextPath  }}/{{ awid  }}/sys/logRecord/list",
+  "name": "sys/logRecord/list",
+  "description": "#### uuCmd documentation\n\nhttps://uuapp.plus4u.net/uu-bookkit-maing01/d11a43aa3a214083b84a4e4103a4f635/book/page?code=82806678\n",
+  "method": "GET",
+  "body": {
+    "mimeType": "application/json",
+    "text": [
+      "{",
+      "  \"timeFrom\": \"2010-03-15T10:00:00.124Z\",",
+      "  \"timeTo\": \"2010-03-15T12:30:00.892Z\",",
+      "  \"pageInfo\": {",
+      "    \"pageIndex\": 0, ",
+      "    \"pageSize\": 100 ",
+      "  }",
+      "}"
+    ]
+  },
+  "parameters": [],
+  "headers": [
+    {
+      "id": "pair_216b98128c704d42b3159d954b349dde_1586440578_1592560665_1594385840_1630421841",
+      "name": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "authentication": {
+    "token": "{{ token  }}",
+    "type": "bearer"
+  },
+  "metaSortKey": -1549535903072,
+  "isPrivate": false,
+  "settingStoreCookies": true,
+  "settingSendCookies": true,
+  "settingDisableRenderRequestBody": false,
+  "settingEncodeUrl": true,
+  "settingRebuildPath": true,
+  "settingFollowRedirects": "global",
+  "_type": "request"
+}

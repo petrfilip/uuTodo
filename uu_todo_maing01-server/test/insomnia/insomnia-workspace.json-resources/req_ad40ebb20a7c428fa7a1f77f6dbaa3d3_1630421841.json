@@ -1,0 +1,40 @@
+{
+  "_id": "req_ad40ebb20a7c428fa7a1f77f6dbaa3d3_1630421841",
+  "parentId": "fld_79c19c49d51d41b3ba2cbb88004b3445_1592560665_1594385840_1630421841",
+  "modified": 1600000000000,
+  "created": 1600000000000,
+  "url": "{{ host  }}/{{ contextPath  }}/{{ awid  }}/sys/uuAppWorkspace/connectArtifact",
+  "name": "sys/uuAppWorkspace/connectArtifact",
+  "description": "uuCmd description\n\nhttps://uuapp.plus4u.net/uu-bookkit-maing01/d11a43aa3a214083b84a4e4103a4f635/book/page?code=41827932\n",
+  "method": "POST",
+  "body": {
+    "mimeType": "application/json",
+    "text": [
+      "{",
+      "\t\"artifactUri\": \"\", ",
+      "\t\"synchronizeArtifactBasicAttributes\": true",
+      "}"
+    ]
+  },
+  "parameters": [],
+  "headers": [
+    {
+      "id": "pair_d002da41dd9b43338397c5026a5604f0_1630421841",
+      "name": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "authentication": {
+    "token": "{{token}}",
+    "type": "bearer"
+  },
+  "metaSortKey": 850,
+  "isPrivate": false,
+  "settingStoreCookies": true,
+  "settingSendCookies": true,
+  "settingDisableRenderRequestBody": false,
+  "settingEncodeUrl": true,
+  "settingRebuildPath": true,
+  "settingFollowRedirects": "global",
+  "_type": "request"
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "req_8dbd2eaaff2b45178d03331d6cb0d48a_1630421841",
+  "parentId": "fld_e1b98c259e294530aaf7229e3adf8768_1592560665_1594385840_1630421841",
+  "modified": 1600000000000,
+  "created": 1600000000000,
+  "url": "{{ host  }}/{{ contextPath  }}/{{ asid  }}/sys/uuSubAppInstance/upgrade",
+  "name": "sys/uuSubAppInstance/upgrade",
+  "description": "uuCmd documentation \n\nhttps://uuapp.plus4u.net/uu-bookkit-maing01/d11a43aa3a214083b84a4e4103a4f635/book/page?code=29499104\n\n",
+  "method": "POST",
+  "body": {
+    "mimeType": "application/json",
+    "text": [
+      "{",
+      "\t\"uuAppProfileAsidAuthorities\": \"urn:uu:GGPLUS4U\", ",
+      "\t\"uuAppProfileAuthorities\": \"urn:uu:GGPLUS4U\" ",
+      "}",
+      "  ",
+      ""
+    ]
+  },
+  "parameters": [],
+  "headers": [
+    {
+      "id": "pair_d23b436e63df467a9ad200b7f2077cc3_1630421841",
+      "name": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "authentication": {
+    "token": "{{ token  }}",
+    "type": "bearer"
+  },
+  "metaSortKey": -1529485542063.1157,
+  "isPrivate": false,
+  "settingStoreCookies": true,
+  "settingSendCookies": true,
+  "settingDisableRenderRequestBody": false,
+  "settingEncodeUrl": true,
+  "settingRebuildPath": true,
+  "settingFollowRedirects": "global",
+  "_type": "request"
+}

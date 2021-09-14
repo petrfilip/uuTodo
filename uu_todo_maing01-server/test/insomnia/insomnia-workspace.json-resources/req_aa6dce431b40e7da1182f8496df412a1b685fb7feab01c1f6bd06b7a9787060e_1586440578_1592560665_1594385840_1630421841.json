@@ -1,0 +1,39 @@
+{
+  "_id": "req_aa6dce431b40e7da1182f8496df412a1b685fb7feab01c1f6bd06b7a9787060e_1586440578_1592560665_1594385840_1630421841",
+  "parentId": "fld_7376f54ddf551a010e0d6dde320f523ce0558bab8bd150abed653aef56cdae7b_1586440578_1592560665_1594385840_1630421841",
+  "modified": 1600000000000,
+  "created": 1600000000000,
+  "url": "{{ host  }}/{{ contextPath  }}/{{ awid  }}/sys/logRecord/delete",
+  "name": "sys/logRecord/delete",
+  "description": "#### uuCmd documentation\nhttps://uuapp.plus4u.net/uu-bookkit-maing01/d11a43aa3a214083b84a4e4103a4f635/book/page?code=40524079\n",
+  "method": "POST",
+  "body": {
+    "mimeType": "application/json",
+    "text": [
+      "{",
+      "  \"toTime\": \"2010-03-15T14:45.000Z\"",
+      "}"
+    ]
+  },
+  "parameters": [],
+  "headers": [
+    {
+      "id": "pair_216b98128c704d42b3159d954b349dde_1586440578_1592560665_1594385840_1630421841",
+      "name": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "authentication": {
+    "token": "{{ token  }}",
+    "type": "bearer"
+  },
+  "metaSortKey": -1549535903009.5,
+  "isPrivate": false,
+  "settingStoreCookies": true,
+  "settingSendCookies": true,
+  "settingDisableRenderRequestBody": false,
+  "settingEncodeUrl": true,
+  "settingRebuildPath": true,
+  "settingFollowRedirects": "global",
+  "_type": "request"
+}

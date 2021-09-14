@@ -1,0 +1,47 @@
+{
+  "_id": "req_9a8921c1bcea4ecc98ec6d2daeb453f1_1592560665_1594385840_1630421841",
+  "parentId": "fld_ccf90cb9ee0f4e5fb01b8038080375b1_1592560665_1594385840_1630421841",
+  "modified": 1600000000000,
+  "created": 1600000000000,
+  "url": "{{ host  }}/{{ contextPath  }}/{{ asid  }}/sys/uuSubAppInstance/init",
+  "name": "sys/uuSubAppInstance/init",
+  "description": "uuCmd documentation\n\nhttps://uuapp.plus4u.net/uu-bookkit-maing01/d11a43aa3a214083b84a4e4103a4f635/book/page?code=38581871",
+  "method": "POST",
+  "body": {
+    "mimeType": "application/json",
+    "text": [
+      "{",
+      "\t\"name\": \"uuTodoMaing01\",",
+      "\t\"description\": \"...\",",
+      "\t\"uuAppProfileAsidAuthorities\": \"urn:uu:GGPLUS4U\",",
+      "\t\"sysState\": \"active\",",
+      "\t\"adviceNote\": {",
+      "\t\t\"message\": \"Migration ...\",",
+      "\t\t\"severity\": \"info\",",
+      "\t\t\"estimatedEndTime\": \"2020-04-21T10:15:30.000Z\"",
+      "\t}",
+      "}"
+    ]
+  },
+  "parameters": [],
+  "headers": [
+    {
+      "id": "pair_a869e74ced7a4d78a40ff4dd2871b9b3_1592560665_1594385840_1630421841",
+      "name": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "authentication": {
+    "token": "{{ token  }}",
+    "type": "bearer"
+  },
+  "metaSortKey": -1529485542367.414,
+  "isPrivate": false,
+  "settingStoreCookies": true,
+  "settingSendCookies": true,
+  "settingDisableRenderRequestBody": false,
+  "settingEncodeUrl": true,
+  "settingRebuildPath": true,
+  "settingFollowRedirects": "global",
+  "_type": "request"
+}

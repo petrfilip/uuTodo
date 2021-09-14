@@ -1,0 +1,57 @@
+{
+  "_id": "req_5eb76e3d90574789934623e79e53ef1e_1630421841",
+  "parentId": "fld_65a4cee2c1094d40a21d7a675ddfd13e_1630421841",
+  "modified": 1600000000000,
+  "created": 1600000000000,
+  "url": "{{ host  }}/{{ contextPath  }}/{{asid}}/sys/uuSubAppInstance/productLogo/set",
+  "name": "sys/uuSubAppInstance/productLogo/set",
+  "description": "uuCmd documentation\n\nhttps://uuapp.plus4u.net/uu-bookkit-maing01/d11a43aa3a214083b84a4e4103a4f635/book/page?code=60152005\n\n\n\n",
+  "method": "POST",
+  "body": {
+    "mimeType": "multipart/form-data",
+    "params": [
+      {
+        "description": "",
+        "id": "pair_0c18e68bf41b40268a1ebff33566ee8c_1630421841",
+        "name": "type",
+        "value": "16x9"
+      },
+      {
+        "description": "",
+        "id": "pair_ecd9cbe7fc2d449286981ce58f263b98_1630421841",
+        "multiline": false,
+        "name": "language",
+        "type": "text",
+        "value": "cs"
+      },
+      {
+        "description": "",
+        "id": "pair_b9892cc73c1a4d318f36c7ff40486ec5_1630421841",
+        "name": "logo",
+        "type": "file",
+        "value": ""
+      }
+    ]
+  },
+  "parameters": [],
+  "headers": [
+    {
+      "id": "pair_1362c7d2a9d04397a53ea39ad1ce0279_1592560665_1594385840_1630421841",
+      "name": "Content-Type",
+      "value": "multipart/form-data"
+    }
+  ],
+  "authentication": {
+    "token": "{{ token  }}",
+    "type": "bearer"
+  },
+  "metaSortKey": -1593284223992.125,
+  "isPrivate": false,
+  "settingStoreCookies": true,
+  "settingSendCookies": true,
+  "settingDisableRenderRequestBody": false,
+  "settingEncodeUrl": true,
+  "settingRebuildPath": true,
+  "settingFollowRedirects": "global",
+  "_type": "request"
+}

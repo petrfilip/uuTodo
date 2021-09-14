@@ -1,0 +1,91 @@
+{
+  "_id": "jar_231d82f281eab070fe75d97714c89283a9e05be8e2d97b37cddcc0380c3e570a_1586440578_1592560665_1594385840_1630421841",
+  "parentId": "wrk_577a898263927e9661876d4866e801b3de41bf3adaf886ab8454f6cc5e100cbd_1586440578_1592560665_1594385840_1630421841",
+  "modified": 1600000000000,
+  "created": 1600000000000,
+  "name": "Default Jar",
+  "cookies": [
+    {
+      "key": "uu.app.s",
+      "maxAge": -1,
+      "domain": "localhost",
+      "path": "/uu-todo-maing01/22222222222222222222222222222222",
+      "httpOnly": true,
+      "extensions": [
+        "SameSite=Strict"
+      ],
+      "hostOnly": true,
+      "creation": "2021-09-01T13:18:58.927Z",
+      "lastAccessed": "2021-09-14T16:49:37.062Z",
+      "id": "05521929805584391"
+    },
+    {
+      "key": "uu.app.csrf",
+      "maxAge": -1,
+      "domain": "localhost",
+      "path": "/uu-todo-maing01/22222222222222222222222222222222",
+      "extensions": [
+        "SameSite=Strict"
+      ],
+      "hostOnly": true,
+      "creation": "2021-09-01T13:18:58.927Z",
+      "lastAccessed": "2021-09-14T16:49:37.062Z",
+      "id": "25145946691653287"
+    },
+    {
+      "key": "uu.app.s",
+      "maxAge": -1,
+      "domain": "localhost",
+      "path": "/uu-todo-maing01/22222222222222222222222222222221",
+      "httpOnly": true,
+      "extensions": [
+        "SameSite=Strict"
+      ],
+      "hostOnly": true,
+      "creation": "2021-09-01T14:45:58.183Z",
+      "lastAccessed": "2021-09-01T14:45:58.183Z",
+      "id": "5977073719223067"
+    },
+    {
+      "key": "uu.app.csrf",
+      "maxAge": -1,
+      "domain": "localhost",
+      "path": "/uu-todo-maing01/22222222222222222222222222222221",
+      "extensions": [
+        "SameSite=Strict"
+      ],
+      "hostOnly": true,
+      "creation": "2021-09-01T14:45:58.183Z",
+      "lastAccessed": "2021-09-01T14:45:58.183Z",
+      "id": "3337065634284211"
+    },
+    {
+      "key": "uu.app.s",
+      "maxAge": -1,
+      "domain": "localhost",
+      "path": "/uu-todo-maing01/11111111111111111111111111111111",
+      "httpOnly": true,
+      "extensions": [
+        "SameSite=Strict"
+      ],
+      "hostOnly": true,
+      "creation": "2021-09-01T16:04:23.054Z",
+      "lastAccessed": "2021-09-02T17:33:05.847Z",
+      "id": "9553138282527049"
+    },
+    {
+      "key": "uu.app.csrf",
+      "maxAge": -1,
+      "domain": "localhost",
+      "path": "/uu-todo-maing01/11111111111111111111111111111111",
+      "extensions": [
+        "SameSite=Strict"
+      ],
+      "hostOnly": true,
+      "creation": "2021-09-01T16:04:23.054Z",
+      "lastAccessed": "2021-09-02T17:33:05.847Z",
+      "id": "38453599976874475"
+    }
+  ],
+  "_type": "cookie_jar"
+}

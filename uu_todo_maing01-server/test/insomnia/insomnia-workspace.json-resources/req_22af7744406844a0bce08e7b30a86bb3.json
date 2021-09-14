@@ -1,0 +1,44 @@
+{
+  "_id": "req_22af7744406844a0bce08e7b30a86bb3",
+  "parentId": "fld_848f0d33e9c8405197eac85363c2c62b",
+  "modified": 1600000000000,
+  "created": 1600000000000,
+  "url": "{{ host  }}/{{ contextPath  }}/{{ awid  }}/item/list",
+  "name": "item/list",
+  "description": "uuCmd documentation\n\nhttps://uuapp.plus4u.net/uu-bookkit-maing01/d11a43aa3a214083b84a4e4103a4f635/book/page?code=96447535\n",
+  "method": "GET",
+  "body": {
+    "mimeType": "application/json",
+    "text": [
+      "{",
+      "\t \"listId\": \"613c70ac2d6d08bd2aa261e9\",",
+      "\t\"state\": \"completed\",",
+      "\t\"pageInfo\": {",
+      "\t\t\"pageIndex\": 0,",
+      "\t\t\"pageSize\": 333",
+      "\t}",
+      "}"
+    ]
+  },
+  "parameters": [],
+  "headers": [
+    {
+      "id": "pair_25e6b00d0a5049d88371e226467eacc8_1592560665_1594385840_1630421841",
+      "name": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "authentication": {
+    "token": "{{ token  }}",
+    "type": "bearer"
+  },
+  "metaSortKey": 187.5,
+  "isPrivate": false,
+  "settingStoreCookies": true,
+  "settingSendCookies": true,
+  "settingDisableRenderRequestBody": false,
+  "settingEncodeUrl": true,
+  "settingRebuildPath": true,
+  "settingFollowRedirects": "global",
+  "_type": "request"
+}

@@ -1,0 +1,90 @@
+{
+  "_id": "req_300ba8988e1c560723b673f0ed705a2d0c07596c2b7f20a061a82eec979cafda_1586440578_1592560665_1594385840_1630421841",
+  "parentId": "fld_a35021351f97d6243fdef1ab9ff051e88fbd893333960fccd0c794eb4bbee29e_1586440578_1592560665_1594385840_1630421841",
+  "modified": 1600000000000,
+  "created": 1600000000000,
+  "url": "{{ host  }}/{{ contextPath  }}/{{ awid  }}/uu-app-binarystore/updateBinaryData",
+  "name": "uu-app-binarystore/updateBinaryData",
+  "description": "#### uuCmd documentation\nhttps://uuapp.plus4u.net/uu-bookkit-maing01/34df77ebe0a04adda6dcd62d32c4f513/book/page?code=updateBinaryData_00",
+  "method": "POST",
+  "body": {
+    "mimeType": "multipart/form-data",
+    "params": [
+      {
+        "disabled": false,
+        "id": "pair_c708b2ef8ccf4646b36cbe19bea8e5f3_1586440578_1592560665_1594385840_1630421841",
+        "name": "code",
+        "value": ""
+      },
+      {
+        "disabled": true,
+        "id": "pair_a0011c96214842a9b5e1beed8e0da3cf_1586440578_1592560665_1594385840_1630421841",
+        "name": "versionName",
+        "value": ""
+      },
+      {
+        "disabled": true,
+        "id": "pair_ffbee43fa1bf4041b7337ab2e5a147b5_1586440578_1592560665_1594385840_1630421841",
+        "name": "createVersion",
+        "value": ""
+      },
+      {
+        "disabled": true,
+        "id": "pair_593e13d06414413a9a271457e18edc49_1586440578_1592560665_1594385840_1630421841",
+        "name": "revisionStrategy",
+        "value": ""
+      },
+      {
+        "disabled": true,
+        "id": "pair_79fd3dfdb093434b9760f2029fe4a8c3_1586440578_1592560665_1594385840_1630421841",
+        "multiline": false,
+        "name": "filename",
+        "type": "text",
+        "value": ""
+      },
+      {
+        "disabled": true,
+        "id": "pair_f0cda1cf63704ff3bcd84b1f043c05a5_1586440578_1592560665_1594385840_1630421841",
+        "multiline": false,
+        "name": "contentType",
+        "type": "text",
+        "value": ""
+      },
+      {
+        "disabled": true,
+        "id": "pair_b815ac76b6a549199b586088e27ebd90_1586440578_1592560665_1594385840_1630421841",
+        "multiline": false,
+        "name": "sys.rev",
+        "type": "text",
+        "value": ""
+      },
+      {
+        "id": "pair_8caf9e1905e44221a762b3cbd299d7e1_1586440578_1592560665_1594385840_1630421841",
+        "name": "data",
+        "type": "file",
+        "value": ""
+      }
+    ]
+  },
+  "parameters": [],
+  "headers": [
+    {
+      "id": "pair_216b98128c704d42b3159d954b349dde_1586440578_1592560665_1594385840_1630421841",
+      "name": "Content-Type",
+      "value": "multipart/form-data"
+    }
+  ],
+  "authentication": {
+    "token": "{{ token  }}",
+    "type": "bearer"
+  },
+  "metaSortKey": -1547374969252.5,
+  "isPrivate": false,
+  "settingStoreCookies": true,
+  "settingSendCookies": true,
+  "settingDisableRenderRequestBody": false,
+  "settingEncodeUrl": true,
+  "settingRebuildPath": true,
+  "settingFollowRedirects": "global",
+  "_type": "request"
+}

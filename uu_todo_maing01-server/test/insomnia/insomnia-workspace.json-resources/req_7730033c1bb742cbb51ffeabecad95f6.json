@@ -1,0 +1,42 @@
+{
+  "_id": "req_7730033c1bb742cbb51ffeabecad95f6",
+  "parentId": "fld_530de0240b594023be82b87fd7acc101",
+  "modified": 1600000000000,
+  "created": 1600000000000,
+  "url": "{{ host  }}/{{ contextPath  }}/{{ awid  }}/todoInstance/update",
+  "name": "todoInstance/update",
+  "description": "uuCmd documentation\n\nhttps://uuapp.plus4u.net/uu-bookkit-maing01/d11a43aa3a214083b84a4e4103a4f635/book/page?code=96447535\n",
+  "method": "POST",
+  "body": {
+    "mimeType": "application/json",
+    "text": [
+      "{",
+      "\t\"code\": \"uniqueCode2\",",
+      "\t\"name\": \"uuTODO\",",
+      "\t\"description\": \"Best uuApp\",",
+      "\t\"uuAppProfileAuthorities\": \"urn:uu:GGPLUS4U\"",
+      "}"
+    ]
+  },
+  "parameters": [],
+  "headers": [
+    {
+      "id": "pair_25e6b00d0a5049d88371e226467eacc8_1592560665_1594385840_1630421841",
+      "name": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "authentication": {
+    "token": "{{ token  }}",
+    "type": "bearer"
+  },
+  "metaSortKey": 125,
+  "isPrivate": false,
+  "settingStoreCookies": true,
+  "settingSendCookies": true,
+  "settingDisableRenderRequestBody": false,
+  "settingEncodeUrl": true,
+  "settingRebuildPath": true,
+  "settingFollowRedirects": "global",
+  "_type": "request"
+}

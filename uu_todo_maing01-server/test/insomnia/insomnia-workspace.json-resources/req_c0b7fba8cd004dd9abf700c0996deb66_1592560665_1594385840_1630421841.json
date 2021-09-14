@@ -1,0 +1,50 @@
+{
+  "_id": "req_c0b7fba8cd004dd9abf700c0996deb66_1592560665_1594385840_1630421841",
+  "parentId": "fld_fe81203ef0ff41b5a587a76f228e7a91_1592560665_1594385840_1630421841",
+  "modified": 1600000000000,
+  "created": 1600000000000,
+  "url": "{{ host  }}/{{ contextPath  }}/{{ awid  }}/sys/uuAppWorkspace/restore",
+  "name": "sys/uuAppWorkspace/restore",
+  "description": "uuCmd documentation\n\n\nhttps://uuapp.plus4u.net/uu-bookkit-maing01/d11a43aa3a214083b84a4e4103a4f635/book/page?code=49399710\n\n",
+  "method": "POST",
+  "body": {
+    "mimeType": "multipart/form-data",
+    "params": [
+      {
+        "description": "",
+        "id": "pair_9501413525e84228b5ef05816985bcbf_1592560665_1594385840_1630421841",
+        "name": "strictMode",
+        "value": "true"
+      },
+      {
+        "description": "",
+        "fileName": "C:\\Users\\User\\Downloads\\2020-03-29_CZ_Mobility_Report_en.pdf",
+        "id": "pair_9e6c8b78f0c045639935476047cf736e_1592560665_1594385840_1630421841",
+        "name": "data",
+        "type": "file",
+        "value": ""
+      }
+    ]
+  },
+  "parameters": [],
+  "headers": [
+    {
+      "id": "pair_6c3257f42ae74f32af40f44b6d3a66cc_1592560665_1594385840_1630421841",
+      "name": "Content-Type",
+      "value": "multipart/form-data"
+    }
+  ],
+  "authentication": {
+    "token": "{{ token  }}",
+    "type": "bearer"
+  },
+  "metaSortKey": -1529485542102.9858,
+  "isPrivate": false,
+  "settingStoreCookies": true,
+  "settingSendCookies": true,
+  "settingDisableRenderRequestBody": false,
+  "settingEncodeUrl": true,
+  "settingRebuildPath": true,
+  "settingFollowRedirects": "global",
+  "_type": "request"
+}

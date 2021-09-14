@@ -1,0 +1,48 @@
+{
+  "_id": "req_a9f1a8d8ed0d3903e6d87bd56fe35d1c88d219d299bf9179617f830021d761ae_1586440578_1592560665_1594385840_1630421841",
+  "parentId": "fld_a35021351f97d6243fdef1ab9ff051e88fbd893333960fccd0c794eb4bbee29e_1586440578_1592560665_1594385840_1630421841",
+  "modified": 1600000000000,
+  "created": 1600000000000,
+  "url": "{{ host  }}/{{ contextPath  }}/{{ awid  }}/uu-app-binarystore/updateBinary",
+  "name": "uu-app-binarystore/updateBinary",
+  "description": "#### uuCmd documentation\nhttps://uuapp.plus4u.net/uu-bookkit-maing01/34df77ebe0a04adda6dcd62d32c4f513/book/page?code=updateBinary_00",
+  "method": "POST",
+  "body": {
+    "mimeType": "application/json",
+    "text": [
+      "{",
+      "  \"code\": \"...\", ",
+      "  \"name\": \"...\", ",
+      "  \"description\": \"...\", ",
+      "  \"versionName\": \"...\", ",
+      "  \"filename\": \"...\", ",
+      "  \"contentType\": \"...\", ",
+      "  \"revisionStrategy\": \"...\",",
+      "  \"sys\": {",
+      "    \"rev\": \"...\" ",
+      "  }",
+      "}"
+    ]
+  },
+  "parameters": [],
+  "headers": [
+    {
+      "id": "pair_216b98128c704d42b3159d954b349dde_1586440578_1592560665_1594385840_1630421841",
+      "name": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "authentication": {
+    "token": "{{ token  }}",
+    "type": "bearer"
+  },
+  "metaSortKey": -1546294502380.25,
+  "isPrivate": false,
+  "settingStoreCookies": true,
+  "settingSendCookies": true,
+  "settingDisableRenderRequestBody": false,
+  "settingEncodeUrl": true,
+  "settingRebuildPath": true,
+  "settingFollowRedirects": "global",
+  "_type": "request"
+}

@@ -1,0 +1,40 @@
+{
+  "_id": "req_d837f40c0b8bb3f2af0b52d2a46c39fbcde8eee0c742d07a9e0e82c84aab452e_1586440578_1592560665_1594385840_1630421841",
+  "parentId": "fld_a35021351f97d6243fdef1ab9ff051e88fbd893333960fccd0c794eb4bbee29e_1586440578_1592560665_1594385840_1630421841",
+  "modified": 1600000000000,
+  "created": 1600000000000,
+  "url": "{{ host  }}/{{ contextPath  }}/{{ awid  }}/uu-app-binarystore/getBinaryData",
+  "name": "uu-app-binarystore/getBinaryData",
+  "description": "#### uuCmd documentation\nhttps://uuapp.plus4u.net/uu-bookkit-maing01/34df77ebe0a04adda6dcd62d32c4f513/book/page?code=getBinaryData_00\n\n#### Input\n```javascript\n{ \n  code: \"...\", //identifier of the binary (all versions of binary have same code)\n  contentDisposition: \"...\" //style of returned binary data; possible values: [\"inline\", \"attachment\"]; default value \"attachment\"  \n};\n```\n#### Validation schema\n```javascript\nshape({\n  code: code().isRequired(),\n  contentDisposition: oneOf([\"inline\",\"attachment\"])\n})\n```\n#### Output\n Returns a binary data stream. ",
+  "method": "GET",
+  "body": {
+    "mimeType": "application/json",
+    "text": [
+      "{ ",
+      "  \"code\": \"...\", ",
+      "  \"contentDisposition\": \"...\"",
+      "}"
+    ]
+  },
+  "parameters": [],
+  "headers": [
+    {
+      "id": "pair_216b98128c704d42b3159d954b349dde_1586440578_1592560665_1594385840_1630421841",
+      "name": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "authentication": {
+    "token": "{{ token  }}",
+    "type": "bearer"
+  },
+  "metaSortKey": -1547374969302.5,
+  "isPrivate": false,
+  "settingStoreCookies": true,
+  "settingSendCookies": true,
+  "settingDisableRenderRequestBody": false,
+  "settingEncodeUrl": true,
+  "settingRebuildPath": true,
+  "settingFollowRedirects": "global",
+  "_type": "request"
+}

@@ -1,0 +1,27 @@
+{
+  "_id": "req_27fb9164578662a9e7cf4d251636f23e71a371258c628b363766612c693e3f88_1586440578_1592560665_1594385840_1630421841",
+  "parentId": "fld_316a10f7ed5a3003753d3b69864657f3afeb613414b7f71e90f6c21224ecf971_1586440578_1592560665_1594385840_1630421841",
+  "modified": 1600000000000,
+  "created": 1600000000000,
+  "url": "{{ host  }}/{{ contextPath  }}/{{ asid  }}/sys/getConfiguration",
+  "name": "sys/getConfiguration",
+  "description": "#### uuCmd documentation\nhttps://uuapp.plus4u.net/uu-bookkit-maing01/d11a43aa3a214083b84a4e4103a4f635/book/page?code=74355319\n",
+  "method": "GET",
+  "body": {},
+  "parameters": [],
+  "headers": [],
+  "authentication": {
+    "prefix": "",
+    "token": "{{ token  }}",
+    "type": "bearer"
+  },
+  "metaSortKey": -1549536151170.5,
+  "isPrivate": false,
+  "settingStoreCookies": true,
+  "settingSendCookies": true,
+  "settingDisableRenderRequestBody": false,
+  "settingEncodeUrl": true,
+  "settingRebuildPath": true,
+  "settingFollowRedirects": "global",
+  "_type": "request"
+}

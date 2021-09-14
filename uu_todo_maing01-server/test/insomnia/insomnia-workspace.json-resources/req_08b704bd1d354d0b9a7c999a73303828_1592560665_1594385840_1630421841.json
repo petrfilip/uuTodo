@@ -1,0 +1,43 @@
+{
+  "_id": "req_08b704bd1d354d0b9a7c999a73303828_1592560665_1594385840_1630421841",
+  "parentId": "fld_028fce63e6594420a6d4fc5ecb1e0058_1592560665_1594385840_1630421841",
+  "modified": 1600000000000,
+  "created": 1600000000000,
+  "url": "{{ host  }}/{{ contextPath  }}/{{ asid  }}/sys/uuSubAppInstance/setRestrictedSysState",
+  "name": "sys/uuSubAppInstance/setRestrictedSysState",
+  "description": "uuCmd documentation\n\nhttps://uuapp.plus4u.net/uu-bookkit-maing01/d11a43aa3a214083b84a4e4103a4f635/book/page?code=15462359\n",
+  "method": "POST",
+  "body": {
+    "mimeType": "application/json",
+    "text": [
+      "{",
+      "\t\"adviceNote\": {",
+      "\t\t\"message\": \"Migration to version 4.0\",",
+      "    \"severity\": \"info\",",
+      "    \"estimatedEndTime\": \"2018-06-21T10:15:30.000Z\"",
+      "  }",
+      "}"
+    ]
+  },
+  "parameters": [],
+  "headers": [
+    {
+      "id": "pair_c37ea9f0d5144d638ddfcd1b8a85e88b_1592560665_1594385840_1630421841",
+      "name": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "authentication": {
+    "token": "{{ token  }}",
+    "type": "bearer"
+  },
+  "metaSortKey": -1529485542192.707,
+  "isPrivate": false,
+  "settingStoreCookies": true,
+  "settingSendCookies": true,
+  "settingDisableRenderRequestBody": false,
+  "settingEncodeUrl": true,
+  "settingRebuildPath": true,
+  "settingFollowRedirects": "global",
+  "_type": "request"
+}

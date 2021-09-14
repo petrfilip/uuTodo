@@ -1,0 +1,45 @@
+{
+  "_id": "req_995c83a1b420499bb23f553c33447f17_1592560665_1594385840_1630421841",
+  "parentId": "fld_79c19c49d51d41b3ba2cbb88004b3445_1592560665_1594385840_1630421841",
+  "modified": 1600000000000,
+  "created": 1600000000000,
+  "url": "{{ host  }}/{{ contextPath  }}/{{ awid  }}/sys/uuAppWorkspace/set",
+  "name": "sys/uuAppWorkspace/set",
+  "description": "uuCmd documentation\n\nhttps://uuapp.plus4u.net/uu-bookkit-maing01/d11a43aa3a214083b84a4e4103a4f635/book/page?code=86353607\n",
+  "method": "POST",
+  "body": {
+    "mimeType": "application/json",
+    "text": [
+      "{",
+      "  \"name\": \"{uuApp}-{uuSubApp}{g00}\",",
+      "  \"description\": \"Description of an application.\",",
+      "  \"adviceNote\":{",
+      "    \"message\": \"Migration to version 2.0\",             ",
+      "    \"severity\": \"info\",                                 ",
+      "    \"estimatedEndTime\": \"2018-06-21T10:15:30.000Z\"     ",
+      "  }",
+      "}"
+    ]
+  },
+  "parameters": [],
+  "headers": [
+    {
+      "id": "pair_362b0712a941428e893f54af1a8be92c_1592560665_1594385840_1630421841",
+      "name": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "authentication": {
+    "token": "{{ token  }}",
+    "type": "bearer"
+  },
+  "metaSortKey": 400,
+  "isPrivate": false,
+  "settingStoreCookies": true,
+  "settingSendCookies": true,
+  "settingDisableRenderRequestBody": false,
+  "settingEncodeUrl": true,
+  "settingRebuildPath": true,
+  "settingFollowRedirects": "global",
+  "_type": "request"
+}
