@@ -14,12 +14,7 @@
       "\t\"name\": \"uuTodoMaing01\",",
       "\t\"description\": \"...\",",
       "\t\"uuAppProfileAsidAuthorities\": \"urn:uu:GGPLUS4U\",",
-      "\t\"sysState\": \"active\",",
-      "\t\"adviceNote\": {",
-      "\t\t\"message\": \"Migration ...\",",
-      "\t\t\"severity\": \"info\",",
-      "\t\t\"estimatedEndTime\": \"2020-04-21T10:15:30.000Z\"",
-      "\t}",
+      "\t\"sysState\": \"active\"",
       "}"
     ]
   },

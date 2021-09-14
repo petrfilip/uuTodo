@@ -50,6 +50,7 @@
     "req_3c0b67f8ed444f9e8c1a0cf50d9adf11_1592560665_1594385840_1630421841 | sys/uuAppWorkspace/setReadOnlySysState",
     "req_3c88a37ea674467cb2484f88578a22ae_1592560665_1594385840_1630421841 | sys/uuSubAppInstance/get",
     "req_471705d819e04fa496c3b4a8835b0242_1592560665_1594385840_1630421841 | sys/uuSubAppInstance/permission/delete",
+    "req_4c4d5684a7d94426a06f00842a328021 | sys/uuAppWorkspace/init",
     "req_4e56a5ffa6c547f485b85581213a149d_1630421841 | sys/uuAppDataStore/stats/get",
     "req_5151303d97dc4640b9c01f4b6b1a3ea6 | list/create",
     "req_529281ed23aa405291a90b3957ea22e1 | item/delete",

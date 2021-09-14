@@ -1175,6 +1175,41 @@
       "_type": "request"
     },
     {
+      "_id": "req_4c4d5684a7d94426a06f00842a328021",
+      "parentId": "fld_530de0240b594023be82b87fd7acc101",
+      "modified": 1600000000000,
+      "created": 1600000000000,
+      "url": "{{ host  }}/{{ contextPath  }}/{{ awid  }}/sys/uuAppWorkspace/init",
+      "name": "sys/uuAppWorkspace/init",
+      "description": "uuCmd documentation\n\nhttps://uuapp.plus4u.net/uu-bookkit-maing01/d11a43aa3a214083b84a4e4103a4f635/book/page?code=96447535\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"code\": \"uniqueCode\",\n\t\"name\": \"uuTODO\",\n\t\"description\": \"Best uuApp\",\n\t\"uuAppProfileAuthorities\": \"urn:uu:GGPLUS4U\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_25e6b00d0a5049d88371e226467eacc8_1592560665_1594385840_1630421841",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "token": "{{ token  }}",
+        "type": "bearer"
+      },
+      "metaSortKey": 81.25,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
       "_id": "req_4e56a5ffa6c547f485b85581213a149d_1630421841",
       "parentId": "fld_70dcd00fca0140b6a138d9c02f6f52b9_1630421841",
       "modified": 1600000000000,
@@ -1360,7 +1395,7 @@
       "method": "POST",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n\t\"name\": \"uuTodoMaing01\",\n\t\"description\": \"...\",\n\t\"uuAppProfileAsidAuthorities\": \"urn:uu:GGPLUS4U\",\n\t\"sysState\": \"active\",\n\t\"adviceNote\": {\n\t\t\"message\": \"Migration ...\",\n\t\t\"severity\": \"info\",\n\t\t\"estimatedEndTime\": \"2020-04-21T10:15:30.000Z\"\n\t}\n}"
+        "text": "{\n\t\"name\": \"uuTodoMaing01\",\n\t\"description\": \"...\",\n\t\"uuAppProfileAsidAuthorities\": \"urn:uu:GGPLUS4U\",\n\t\"sysState\": \"active\"\n}"
       },
       "parameters": [],
       "headers": [
