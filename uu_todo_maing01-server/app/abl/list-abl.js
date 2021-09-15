@@ -92,15 +92,15 @@ class ListAbl {
       dtoIn,
       validationResult,
       WARNINGS.initUnsupportedKeys.code,
-      Errors.List.InvalidDtoIn
+      Errors.Update.InvalidDtoIn
     );
 
     // HDS 2 - System checks existence and state of the todoInstance uuObject.
     await ValidatorService.todoInstanceCheck(awid);
 
     // HDS 3 - System verifies that the inserted date is not from the past (it cannot be older than today's date).
-    if (dtoIn.deadline && dtoIn.deadline <= new Date()) {
-      throw new Errors.Update.DeadlineDateIsFromThePast({ deadline: dtoIn.deadline }, e);
+    if (dtoIn.deadline && new Date(dtoIn.deadline) <= new Date()) {
+      throw new Errors.Update.DeadlineDateIsFromThePast({ deadline: dtoIn.deadline });
     }
 
     let updatedList = {
@@ -128,7 +128,7 @@ class ListAbl {
       dtoIn,
       validationResult,
       WARNINGS.initUnsupportedKeys.code,
-      Errors.List.InvalidDtoIn
+      Errors.Delete.InvalidDtoIn
     );
 
     // HDS 2 - System checks existence and state of the todoInstance uuObject.
@@ -159,7 +159,9 @@ class ListAbl {
     await Dao.list.remove(list);
 
     // HDS 7 - Returns properly filled dtoOut.
-    return { ...uuAppErrorMap };
+    let dtoOut = {};
+    dtoOut.uuAppErrorMap = uuAppErrorMap;
+    return dtoOut;
   }
 
   async list(uri, dtoIn, session) {
@@ -167,7 +169,7 @@ class ListAbl {
     const pageInfo = {
       pageIndex: 0,
       pageSize: 500,
-      // ...dtoIn.pageInfo
+      ...dtoIn.pageInfo,
     };
 
     // HDS 1 - Validation of dtoIn.
@@ -184,10 +186,12 @@ class ListAbl {
     await ValidatorService.todoInstanceCheck(awid);
 
     // HDS 3 - System gets uuObject list from uuAppObjectStore (using list DAO get with awid and dtoIn.id).
-    const itemList = await Dao.list.list(awid, pageInfo);
+    const dtoOut = await Dao.list.list(awid, pageInfo);
 
     // HDS 4 - Returns properly filled dtoOut.
-    return { ...itemList, ...uuAppErrorMap };
+    dtoOut.uuAppErrorMap = uuAppErrorMap;
+    dtoOut.pageInfo = pageInfo;
+    return dtoOut;
   }
 }
 

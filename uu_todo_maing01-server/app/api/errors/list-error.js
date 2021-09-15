@@ -52,6 +52,14 @@ const Get = {
 const Delete = {
   UC_CODE: `${TodoUseCaseError.ERROR_PREFIX}list/delete/`,
 
+  InvalidDtoIn: class extends TodoUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Delete.UC_CODE}invalidDtoIn`;
+      this.message = "DtoIn is not valid.";
+    }
+  },
+
   ListContainsActiveItems: class extends TodoUseCaseError {
     constructor() {
       super(...arguments);

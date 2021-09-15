@@ -31,7 +31,7 @@ class ItemAbl {
       dtoIn,
       validationResult,
       WARNINGS.initUnsupportedKeys.code,
-      Errors.List.InvalidDtoIn
+      Errors.Create.InvalidDtoIn
     );
 
     // HDS 2 - System checks existence and state of the todoInstance uuObject.
@@ -40,12 +40,13 @@ class ItemAbl {
     // HDS 3 - Expands dtoIn with the key "state: active".
     dtoIn.state = "active";
     dtoIn.awid = awid;
+    dtoIn.highPriority = !!dtoIn.highPriority;
 
     // HDS 4 - Verifies, that the list entered in dtoIn.listId exists (using list DAO get with awid and dtoIn.listId).
     if (dtoIn.listId) {
       const list = await Dao.list.get(awid, dtoIn.listId);
       if (list === null) {
-        throw new Errors.Create.ListDoesNotExist({ id: dtoIn.listId }, e);
+        throw new Errors.Create.ListDoesNotExist({ id: dtoIn.listId });
       }
     }
 
@@ -58,10 +59,8 @@ class ItemAbl {
     }
 
     // HDS 6 - Returns properly filled dtoOut.
-    return {
-      ...createdList,
-      uuAppErrorMap: uuAppErrorMap,
-    };
+    createdList.uuAppErrorMap = uuAppErrorMap;
+    return createdList;
   }
 
   async get(uri, dtoIn, session) {
