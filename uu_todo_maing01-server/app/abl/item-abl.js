@@ -97,7 +97,7 @@ class ItemAbl {
       dtoIn,
       validationResult,
       WARNINGS.initUnsupportedKeys.code,
-      Errors.List.InvalidDtoIn
+      Errors.Update.InvalidDtoIn
     );
 
     // HDS 2 - System checks existence and state of the todoInstance uuObject.
@@ -110,7 +110,7 @@ class ItemAbl {
     }
 
     if (item.state !== "active") {
-      throw new Errors.Create.ItemIsNotInCorrectState({
+      throw new Errors.Update.ItemIsNotInCorrectState({
         id: dtoIn.id,
         currentState: item.state,
         expectedState: "active",
@@ -121,7 +121,7 @@ class ItemAbl {
     if (dtoIn.listId) {
       const list = await Dao.list.get(awid, dtoIn.listId);
       if (list === null) {
-        throw new Errors.Create.ListDoesNotExist({ id: dtoIn.listId });
+        throw new Errors.Update.ListDoesNotExist({ id: dtoIn.listId });
       }
     }
 
@@ -191,7 +191,7 @@ class ItemAbl {
       dtoIn,
       validationResult,
       WARNINGS.initUnsupportedKeys.code,
-      Errors.List.InvalidDtoIn
+      Errors.SetFinalState.InvalidDtoIn
     );
 
     // HDS 2 - System checks existence and state of the todoInstance uuObject.
@@ -215,7 +215,9 @@ class ItemAbl {
     await Dao.item.remove(item);
 
     // HDS 4 - Returns properly filled dtoOut.
-    return { ...uuAppErrorMap };
+    let dtoOut = {};
+    dtoOut.uuAppErrorMap = uuAppErrorMap;
+    return dtoOut;
   }
 
   async list(uri, dtoIn, session) {

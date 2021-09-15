@@ -44,6 +44,14 @@ const Get = {
 const Delete = {
   UC_CODE: `${TodoUseCaseError.ERROR_PREFIX}item/delete/`,
 
+  InvalidDtoIn: class extends TodoUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Delete.UC_CODE}invalidDtoIn`;
+      this.message = "DtoIn is not valid.";
+    }
+  },
+
   ListContainsActiveItems: class extends TodoUseCaseError {
     constructor() {
       super(...arguments);
@@ -107,6 +115,14 @@ const Update = {
     }
   },
 
+  ListDoesNotExist: class extends TodoUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Update.UC_CODE}listDoesNotExist`;
+      this.message = "List with given id does not exist.";
+    }
+  },
+
   ItemIsNotInCorrectState: class extends TodoUseCaseError {
     constructor() {
       super(...arguments);
@@ -122,7 +138,7 @@ const SetFinalState = {
   InvalidDtoIn: class extends TodoUseCaseError {
     constructor() {
       super(...arguments);
-      this.code = `${Update.UC_CODE}invalidDtoIn`;
+      this.code = `${SetFinalState.UC_CODE}invalidDtoIn`;
       this.message = "DtoIn is not valid.";
     }
   },
