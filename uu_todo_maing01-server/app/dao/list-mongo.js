@@ -34,8 +34,8 @@ class ListMongo extends UuObjectDao {
     return await super.deleteOne(filter);
   }
 
-  async list(awid, pageInfo = {}) {
-    return await super.find({awid}, pageInfo);
+   list(awid, pageInfo = {}) {
+    return  super.find({awid}, pageInfo);
   }
 }
 
