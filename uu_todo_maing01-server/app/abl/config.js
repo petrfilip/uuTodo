@@ -8,13 +8,7 @@ const Dao = {
 };
 
 const ValidatorService = {
-  /**
-   * System checks existence and state of the todoInstance uuObject.
-   *
-   * @param awid
-   * @returns {Promise<*>}
-   */
-  todoInstanceCheck: async (awid) => {
+  todoInstanceCheck: async (awid, expectedState = ["active"]) => {
     let todoInstance;
     try {
       todoInstance = await Dao.todoInstance.getByAwid(awid);
@@ -22,10 +16,10 @@ const ValidatorService = {
       throw new Errors.Load.TodoInstanceDoesNotExist(e);
     }
 
-    if (todoInstance.state !== "active") {
+    if (!expectedState.includes(todoInstance.state)) {
       throw new Errors.Load.TodoInstanceIsNotInProperState({
         currentState: todoInstance.state,
-        expectedState: "active",
+        expectedState: expectedState,
       });
     }
 

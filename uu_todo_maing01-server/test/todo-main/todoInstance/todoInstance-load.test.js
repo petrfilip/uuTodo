@@ -10,7 +10,7 @@ afterAll(async () => {
   await TestHelper.teardown();
 });
 
-describe("Testing the init uuCmd...", () => {
+describe("todoInstance load", () => {
   test("HDS - load", async () => {
     let session = await TestHelper.login("AwidLicenseOwner", false, false);
 
@@ -30,6 +30,6 @@ describe("Testing the init uuCmd...", () => {
     expect(result1.data.id).not.toBeNull();
     expect(result1.data.name).toEqual(dtoIn.name);
     expect(result1.data.code).toEqual(dtoIn.code);
-    // expect(result1.data.sysState).toEqual(dtoIn.sysState); //Todo
+    expect(result1.data.authorizedProfileList[0]).toEqual("Authorities");
   });
 });

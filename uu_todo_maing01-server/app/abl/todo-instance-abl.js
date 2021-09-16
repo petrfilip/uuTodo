@@ -159,7 +159,7 @@ class TodoInstanceAbl {
     );
 
     // HDS 2 - System checks existence and state of the todoInstance uuObject.
-    const loadedTodoInstance = await ValidatorService.todoInstanceCheck(awid);
+    const loadedTodoInstance = await ValidatorService.todoInstanceCheck(awid, ["active", "suspended"]);
 
     // HDS 3 - System updates uuObject todoInstance in the uuAppObjectStore.
     const todoInstanceToUpdate = {

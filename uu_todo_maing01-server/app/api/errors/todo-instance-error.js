@@ -39,12 +39,12 @@ const Init = {
 };
 
 const Load = {
-  UC_CODE: `${TodoMainUseCaseError.ERROR_PREFIX}init/`,
+  UC_CODE: `${TodoMainUseCaseError.ERROR_PREFIX}load/`,
 
   TodoInstanceDoesNotExist: class extends TodoMainUseCaseError {
     constructor() {
       super(...arguments);
-      this.code = `${Init.UC_CODE}todoInstanceDoesNotExist`;
+      this.code = `${Load.UC_CODE}todoInstanceDoesNotExist`;
       this.message = "TodoInstance does not exist.";
     }
   },
@@ -52,7 +52,7 @@ const Load = {
   TodoInstanceIsNotInProperState: class extends TodoMainUseCaseError {
     constructor() {
       super(...arguments);
-      this.code = `${Init.UC_CODE}todoInstanceIsNotInProperState`;
+      this.code = `${Load.UC_CODE}todoInstanceIsNotInProperState`;
       this.message = "The application is not in proper state.\n";
     }
   },
@@ -64,7 +64,7 @@ const Update = {
   InvalidDtoIn: class extends TodoMainUseCaseError {
     constructor() {
       super(...arguments);
-      this.code = `${Init.UC_CODE}invalidDtoIn`;
+      this.code = `${Update.UC_CODE}invalidDtoIn`;
       this.message = "DtoIn is not valid.";
     }
   },
@@ -72,19 +72,19 @@ const Update = {
   TodoInstanceDaoUpdateByAwidFailed: class extends TodoMainUseCaseError {
     constructor() {
       super(...arguments);
-      this.code = `${Init.UC_CODE}todoInstanceDaoUpdateByAwidFailed`;
+      this.code = `${Update.UC_CODE}todoInstanceDaoUpdateByAwidFailed`;
       this.message = "The update of todoInstance by todoInstance DAO updateByAwid failed.\n";
     }
   },
 };
 
 const SetState = {
-  UC_CODE: `${TodoMainUseCaseError.ERROR_PREFIX}update/`,
+  UC_CODE: `${TodoMainUseCaseError.ERROR_PREFIX}setState/`,
 
   InvalidDtoIn: class extends TodoMainUseCaseError {
     constructor() {
       super(...arguments);
-      this.code = `${Init.UC_CODE}invalidDtoIn`;
+      this.code = `${SetState.UC_CODE}invalidDtoIn`;
       this.message = "DtoIn is not valid.";
     }
   },
@@ -92,7 +92,7 @@ const SetState = {
   TodoInstanceDaoUpdateByAwidFailed: class extends TodoMainUseCaseError {
     constructor() {
       super(...arguments);
-      this.code = `${Init.UC_CODE}todoInstanceDaoUpdateByAwidFailed`;
+      this.code = `${SetState.UC_CODE}todoInstanceDaoUpdateByAwidFailed`;
       this.message = "The update of todoInstance by todoInstance DAO updateByAwid failed.\n";
     }
   },
