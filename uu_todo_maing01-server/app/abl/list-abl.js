@@ -166,7 +166,7 @@ class ListAbl {
 
   async list(uri, dtoIn, session) {
     const awid = uri.getAwid();
-    const pageInfo = {
+    dtoIn.pageInfo = {
       pageIndex: 0,
       pageSize: 500,
       ...dtoIn.pageInfo,
@@ -186,11 +186,10 @@ class ListAbl {
     await ValidatorService.todoInstanceCheck(awid);
 
     // HDS 3 - System gets uuObject list from uuAppObjectStore (using list DAO get with awid and dtoIn.id).
-    const dtoOut = await Dao.list.list(awid, pageInfo);
+    const dtoOut = await Dao.list.list(awid, dtoIn.pageInfo);
 
     // HDS 4 - Returns properly filled dtoOut.
     dtoOut.uuAppErrorMap = uuAppErrorMap;
-    dtoOut.pageInfo = pageInfo;
     return dtoOut;
   }
 }

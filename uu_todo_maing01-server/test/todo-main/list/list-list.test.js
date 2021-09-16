@@ -58,9 +58,9 @@ describe("list list uuCMD tests", () => {
     expect(resultList.data.pageInfo.pageIndex).toEqual(0);
     expect(resultList.data.pageInfo.pageSize).toEqual(3);
     expect(resultList.data.itemList.length).toEqual(3);
-    expect(result1.data.itemList[0].name).toEqual(result1.name);
-    expect(result1.data.itemList[1].name).toEqual(result2.name);
-    expect(result1.data.itemList[2].name).toEqual(result3.name);
+    expect(resultList.data.itemList[0].name).toEqual(result1.name);
+    expect(resultList.data.itemList[1].name).toEqual(result2.name);
+    expect(resultList.data.itemList[2].name).toEqual(result3.name);
   });
 
   test("Alternative - invalid dtoIn", async () => {

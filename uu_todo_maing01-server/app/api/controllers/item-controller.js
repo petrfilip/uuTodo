@@ -25,7 +25,6 @@ class TodoInstanceController {
   setFinalState(ucEnv) {
     return ItemAbl.setFinalState(ucEnv.getUri(), ucEnv.getDtoIn(), ucEnv.getSession());
   }
-
 }
 
 module.exports = new TodoInstanceController();

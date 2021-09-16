@@ -1,11 +1,11 @@
 "use strict";
-const {UuObjectDao} = require("uu_appg01_server").ObjectStore;
+const { UuObjectDao } = require("uu_appg01_server").ObjectStore;
 
 class ItemMongo extends UuObjectDao {
   async createSchema() {
-    await super.createIndex({awid: 1, _id: 1}, {unique: true});
-    await super.createIndex({awid: 1, listId: 1, state: 1}, {unique: false});
-    await super.createIndex({awid: 1, state: 1}, {unique: false});
+    await super.createIndex({ awid: 1, _id: 1 }, { unique: true });
+    await super.createIndex({ awid: 1, listId: 1, state: 1 }, { unique: false });
+    await super.createIndex({ awid: 1, state: 1 }, { unique: false });
   }
 
   async create(uuObject) {
@@ -24,7 +24,7 @@ class ItemMongo extends UuObjectDao {
     let filter = {
       awid,
       listId,
-      state
+      state,
     };
     return await super.find(filter, pageInfo);
   }
@@ -32,16 +32,13 @@ class ItemMongo extends UuObjectDao {
   async listByState(awid, state, pageInfo) {
     let filter = {
       awid,
-      state
+      state,
     };
     return await super.find(filter, pageInfo);
   }
 
-  async list(awid, state, pageInfo) {
-    let filter = {
-      awid,
-    };
-    return await super.find(filter, pageInfo);
+  async list(awid, pageInfo = {}) {
+    return await super.find({ awid }, pageInfo);
   }
 
   async updateByAwid(uuObject) {
@@ -60,8 +57,8 @@ class ItemMongo extends UuObjectDao {
 
     const objectToUpdate = {
       ...filter,
-      state
-    }
+      state,
+    };
     return await super.findOneAndUpdate(filter, objectToUpdate, "NONE");
   }
 

@@ -222,9 +222,9 @@ class ItemAbl {
 
   async list(uri, dtoIn, session) {
     const awid = uri.getAwid();
-    const pageInfo = {
+    dtoIn.pageInfo = {
       pageIndex: 0,
-      pageSize: 1000,
+      pageSize: 500,
       ...dtoIn.pageInfo,
     };
 
@@ -245,11 +245,11 @@ class ItemAbl {
     let itemList;
 
     if (dtoIn.listId && dtoIn.state) {
-      itemList = await Dao.item.listByListAndState(awid, dtoIn.listId, dtoIn.state, pageInfo);
+      itemList = await Dao.item.listByListAndState(awid, dtoIn.listId, dtoIn.state, dtoIn.pageInfo);
     } else if (dtoIn.state) {
-      itemList = await Dao.item.listByState(awid, dtoIn.state, pageInfo);
+      itemList = await Dao.item.listByState(awid, dtoIn.state, dtoIn.pageInfo);
     } else {
-      itemList = await Dao.item.list(awid, pageInfo);
+      itemList = await Dao.item.list(awid, dtoIn.pageInfo);
     }
 
     // HDS 4 - Returns properly filled dtoOut.
