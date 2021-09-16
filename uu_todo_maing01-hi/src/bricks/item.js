@@ -3,6 +3,7 @@ import UU5 from "uu5g04";
 import { createVisualComponent, useRef, useState } from "uu5g04-hooks";
 import Config from "./config/config";
 import AddItem from "./add-item";
+import Lsi from "../config/lsi";
 //@@viewOff:imports
 
 const Mode = {
@@ -101,10 +102,20 @@ const Item = createVisualComponent({
               onClick={() =>
                 modalRef.current.open({
                   onConfirm: () => onDelete({ id: item.id }),
-                  header: "Confirm delete",
-                  content: <UU5.Bricks.P>Do you really want to delete item `{item.text}`</UU5.Bricks.P>,
-                  confirmButtonProps: { content: "Yeah!", colorSchema: "green" },
-                  refuseButtonProps: { content: "Noooo!", colorSchema: "danger" },
+                  header: <UU5.Bricks.Lsi lsi={Lsi.item.confirmDeleteHeader} />,
+                  content: (
+                    <UU5.Bricks.P>
+                      <UU5.Bricks.Lsi lsi={Lsi.item.confirmDeleteContent} params={[item.text]} />
+                    </UU5.Bricks.P>
+                  ),
+                  confirmButtonProps: {
+                    content: <UU5.Bricks.Lsi lsi={Lsi.item.confirmDeleteYes} />,
+                    colorSchema: "green",
+                  },
+                  refuseButtonProps: {
+                    content: <UU5.Bricks.Lsi lsi={Lsi.item.confirmDeleteNo} />,
+                    colorSchema: "danger",
+                  },
                   confirmButtonLeft: true,
                 })
               }

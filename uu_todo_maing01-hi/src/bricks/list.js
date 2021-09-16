@@ -2,6 +2,8 @@
 import UU5 from "uu5g04";
 import { createVisualComponent, useState } from "uu5g04-hooks";
 import Config from "./config/config";
+import Lsi from "../config/lsi";
+
 //@@viewOff:imports
 
 const List = createVisualComponent({
@@ -28,7 +30,7 @@ const List = createVisualComponent({
     const addList = (
       <UU5.Forms.TextButton
         value={list?.name || ""}
-        message="Todo list name"
+        message={<UU5.Bricks.Lsi lsi={Lsi.list.inputFieldHelp} />}
         buttons={[
           {
             icon: "mdi-check",

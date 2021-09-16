@@ -8,7 +8,6 @@ import "uu_plus4u5g01-app";
 
 import Config from "./config/config.js";
 import Lsi from "../config/lsi.js";
-import ListProvider from "../bricks/list-provider";
 import Calls from "../calls";
 import List from "../bricks/list";
 //@@viewOff:imports

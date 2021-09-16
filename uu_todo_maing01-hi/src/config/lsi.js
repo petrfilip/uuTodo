@@ -1,4 +1,61 @@
 const Lsi = {
+  error: {
+    cs: "Nastala neočekávaná chyba",
+    en: "Error happened!",
+  },
+  item: {
+    showCompleted: {
+      cs: "Zobrazit hotové úkoly",
+      en: "Show completed tasks",
+    },
+    hideCompleted: {
+      cs: "Skrýt hotové úkoly",
+      en: "Hide completed tasks",
+    },
+    confirmDeleteNo: {
+      cs: "Ne!",
+      en: "Noooo!",
+    },
+    confirmDeleteYes: {
+      cs: "Ano!",
+      en: "Yeah!",
+    },
+    confirmDeleteContent: {
+      cs: "Opravdu chcete smazat položku `%s`",
+      en: "Do you really want to delete item `%s`",
+    },
+    confirmDeleteHeader: {
+      cs: "Potvrdit smazání",
+      en: "Confirm delete",
+    },
+  },
+  itemList: {
+    noItem: {
+      cs: "Žádné položky",
+      en: "No items!",
+    },
+  },
+  addItem: {
+    isHighPriorityTask: {
+      cs: "Úkol s vysokou prioritou?",
+      en: "Is high priority task?",
+    },
+  },
+
+  list: {
+    inputFieldHelp: {
+      cs: "Název todo listu",
+      en: "Todo list name",
+    },
+  },
+
+  items: {
+    welcomeHelp: {
+      cs: "Vyber todo list v pravém menu nebo vytvoř nový",
+      en: "Choose Todo list from right menu or create new one",
+    },
+  },
+
   appName: {
     cs: "Aplikace uuTodo",
     en: "Application uuTodo",
@@ -34,7 +91,7 @@ const Lsi = {
     termsOfUse: {
       cs: "Podmínky užívání",
       en: "Terms of use",
-    }
+    },
   },
 
   notAuth: {

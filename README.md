@@ -106,7 +106,7 @@ TODO:
 - [x] backend tests
 - [ ] mock data
 - [ ] deadline do GUI listu - nedělat
-- [ ] přidat lsi
+- [x] přidat lsi
 
 ## Development and Usage
 

@@ -4,6 +4,8 @@ import { createVisualComponent, useState } from "uu5g04-hooks";
 import Uu5Tiles from "uu5tilesg02";
 import Config from "./config/config";
 import Item from "./item";
+import Lsi from "../config/lsi.js";
+
 //@@viewOff:imports
 
 const ItemList = createVisualComponent({
@@ -62,7 +64,7 @@ const ItemList = createVisualComponent({
     if (items.length === 0) {
       return (
         <>
-          <UU5.Common.Error content="No items!" />
+          <UU5.Common.Error content={<UU5.Bricks.Lsi lsi={Lsi.itemList.noItem} />} />
         </>
       );
     }
@@ -76,8 +78,14 @@ const ItemList = createVisualComponent({
           {renderActiveItem}
         </Uu5Tiles.Grid>
 
-        {(showAll && <UU5.Bricks.Button onClick={handleClick}>Hide completed</UU5.Bricks.Button>) || (
-          <UU5.Bricks.Button onClick={handleClick}>Show completed</UU5.Bricks.Button>
+        {(showAll && (
+          <UU5.Bricks.Button onClick={handleClick}>
+            <UU5.Bricks.Lsi lsi={Lsi.item.hideCompleted} />
+          </UU5.Bricks.Button>
+        )) || (
+          <UU5.Bricks.Button onClick={handleClick}>
+            <UU5.Bricks.Lsi lsi={Lsi.item.showCompleted} />
+          </UU5.Bricks.Button>
         )}
 
         <Uu5Tiles.Grid data={completedItems} tileHeight="auto" rowSpacing={8}>

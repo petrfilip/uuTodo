@@ -6,6 +6,7 @@ import ItemProvider from "../bricks/item-provider";
 import ItemsTitle from "../items-title";
 import ItemList from "../bricks/item-list";
 import AddItem from "../bricks/add-item";
+import Lsi from "../config/lsi";
 //@@viewOff:imports
 
 const Items = createVisualComponent({
@@ -42,7 +43,13 @@ const Items = createVisualComponent({
         case "load":
         case "loadNext":
         default:
-          return <UU5.Bricks.Error content="Error happened!" error={errorData.error} errorData={errorData.data} />;
+          return (
+            <UU5.Bricks.Error
+              content={<UU5.Bricks.Lsi lsi={Lsi.error} />}
+              error={errorData.error}
+              errorData={errorData.data}
+            />
+          );
       }
     }
     //@@viewOff:private
@@ -52,7 +59,7 @@ const Items = createVisualComponent({
       <UU5.Bricks.Container>
         {!props?.params?.listId && (
           <UU5.Bricks.Block background colorSchema="orange">
-            Choose Todo list from right menu
+            <UU5.Bricks.Lsi lsi={Lsi.items.welcomeHelp} />
           </UU5.Bricks.Block>
         )}
 

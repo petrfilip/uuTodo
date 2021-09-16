@@ -2,6 +2,8 @@
 import UU5 from "uu5g04";
 import { createVisualComponent } from "uu5g04-hooks";
 import Config from "./config/config";
+import Lsi from "../config/lsi";
+
 //@@viewOff:imports
 
 const AddItem = createVisualComponent({
@@ -44,7 +46,7 @@ const AddItem = createVisualComponent({
         <UU5.Forms.SwitchSelector
           value={defaultValues?.highPriority ? String(defaultValues?.highPriority) : "false"}
           items={["true", "false"].map((value) => ({ value }))}
-          label="Is high priority task"
+          label={<UU5.Bricks.Lsi lsi={Lsi.addItem.isHighPriorityTask} />}
           name={"highPriority"}
         />
         <UU5.Forms.Controls buttonSubmitProps={{ content: <UU5.Bricks.Icon icon="mdi-check" /> }} />
