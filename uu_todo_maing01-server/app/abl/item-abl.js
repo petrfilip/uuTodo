@@ -10,7 +10,22 @@ const Errors = require("../api/errors/item-error.js");
 const { Dao, ValidatorService } = require("./config");
 
 const WARNINGS = {
-  initUnsupportedKeys: {
+  createUnsupportedKeys: {
+    code: `${Errors.Create.UC_CODE}unsupportedKeys`,
+  },
+  getUnsupportedKeys: {
+    code: `${Errors.Get.UC_CODE}unsupportedKeys`,
+  },
+  updateUnsupportedKeys: {
+    code: `${Errors.Get.UC_CODE}unsupportedKeys`,
+  },
+  setFinalStateUnsupportedKeys: {
+    code: `${Errors.Get.UC_CODE}unsupportedKeys`,
+  },
+  deleteUnsupportedKeys: {
+    code: `${Errors.Delete.UC_CODE}unsupportedKeys`,
+  },
+  listUnsupportedKeys: {
     code: `${Errors.List.UC_CODE}unsupportedKeys`,
   },
 };
@@ -30,7 +45,7 @@ class ItemAbl {
     let uuAppErrorMap = ValidationHelper.processValidationResult(
       dtoIn,
       validationResult,
-      WARNINGS.initUnsupportedKeys.code,
+      WARNINGS.createUnsupportedKeys.code,
       Errors.Create.InvalidDtoIn
     );
 
@@ -71,7 +86,7 @@ class ItemAbl {
     let uuAppErrorMap = ValidationHelper.processValidationResult(
       dtoIn,
       validationResult,
-      WARNINGS.initUnsupportedKeys.code,
+      WARNINGS.getUnsupportedKeys.code,
       Errors.Get.InvalidDtoIn
     );
 
@@ -96,7 +111,7 @@ class ItemAbl {
     let uuAppErrorMap = ValidationHelper.processValidationResult(
       dtoIn,
       validationResult,
-      WARNINGS.initUnsupportedKeys.code,
+      WARNINGS.updateUnsupportedKeys.code,
       Errors.Update.InvalidDtoIn
     );
 
@@ -151,7 +166,7 @@ class ItemAbl {
     let uuAppErrorMap = ValidationHelper.processValidationResult(
       dtoIn,
       validationResult,
-      WARNINGS.initUnsupportedKeys.code,
+      WARNINGS.setFinalStateUnsupportedKeys.code,
       Errors.SetFinalState.InvalidDtoIn
     );
 
@@ -190,8 +205,8 @@ class ItemAbl {
     let uuAppErrorMap = ValidationHelper.processValidationResult(
       dtoIn,
       validationResult,
-      WARNINGS.initUnsupportedKeys.code,
-      Errors.SetFinalState.InvalidDtoIn
+      WARNINGS.deleteUnsupportedKeys.code,
+      Errors.Delete.InvalidDtoIn
     );
 
     // HDS 2 - System checks existence and state of the todoInstance uuObject.
@@ -234,7 +249,7 @@ class ItemAbl {
     let uuAppErrorMap = ValidationHelper.processValidationResult(
       dtoIn,
       validationResult,
-      WARNINGS.initUnsupportedKeys.code,
+      WARNINGS.listUnsupportedKeys.code,
       Errors.List.InvalidDtoIn
     );
 

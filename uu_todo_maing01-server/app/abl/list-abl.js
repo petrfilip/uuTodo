@@ -10,7 +10,20 @@ const Errors = require("../api/errors/list-error.js");
 const { Dao, ValidatorService } = require("./config");
 
 const WARNINGS = {
-  initUnsupportedKeys: {
+  createUnsupportedKeys: {
+    code: `${Errors.Create.UC_CODE}unsupportedKeys`,
+  },
+  getUnsupportedKeys: {
+    code: `${Errors.Get.UC_CODE}unsupportedKeys`,
+  },
+  updateUnsupportedKeys: {
+    code: `${Errors.Get.UC_CODE}unsupportedKeys`,
+  },
+
+  deleteUnsupportedKeys: {
+    code: `${Errors.Delete.UC_CODE}unsupportedKeys`,
+  },
+  listUnsupportedKeys: {
     code: `${Errors.List.UC_CODE}unsupportedKeys`,
   },
 };
@@ -30,7 +43,7 @@ class ListAbl {
     let uuAppErrorMap = ValidationHelper.processValidationResult(
       dtoIn,
       validationResult,
-      WARNINGS.initUnsupportedKeys.code,
+      WARNINGS.createUnsupportedKeys.code,
       Errors.Create.InvalidDtoIn
     );
 
@@ -66,7 +79,7 @@ class ListAbl {
     let uuAppErrorMap = ValidationHelper.processValidationResult(
       dtoIn,
       validationResult,
-      WARNINGS.initUnsupportedKeys.code,
+      WARNINGS.getUnsupportedKeys.code,
       Errors.Get.InvalidDtoIn
     );
 
@@ -91,7 +104,7 @@ class ListAbl {
     let uuAppErrorMap = ValidationHelper.processValidationResult(
       dtoIn,
       validationResult,
-      WARNINGS.initUnsupportedKeys.code,
+      WARNINGS.updateUnsupportedKeys.code,
       Errors.Update.InvalidDtoIn
     );
 
@@ -127,7 +140,7 @@ class ListAbl {
     let uuAppErrorMap = ValidationHelper.processValidationResult(
       dtoIn,
       validationResult,
-      WARNINGS.initUnsupportedKeys.code,
+      WARNINGS.deleteUnsupportedKeys.code,
       Errors.Delete.InvalidDtoIn
     );
 
@@ -178,7 +191,7 @@ class ListAbl {
     let uuAppErrorMap = ValidationHelper.processValidationResult(
       dtoIn,
       validationResult,
-      WARNINGS.initUnsupportedKeys.code,
+      WARNINGS.listUnsupportedKeys.code,
       Errors.List.InvalidDtoIn
     );
 

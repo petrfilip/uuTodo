@@ -16,7 +16,7 @@ afterEach(async () => {
   await TestHelper.teardown();
 });
 
-describe("update create uuCMD tests", () => {
+describe("item update uuCMD tests", () => {
   test("HDS", async () => {
     let resultList = await TestHelper.executePostCommand("list/create", { name: "list" });
     let resultItem = await TestHelper.executePostCommand("item/create", { listId: resultList.id, text: "item" });
