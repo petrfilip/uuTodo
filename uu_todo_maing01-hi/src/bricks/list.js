@@ -23,67 +23,57 @@ const List = createVisualComponent({
   render({ list, onDelete, onUpdate, onCreate }) {
     //@@viewOn:hooks
     const [editMode, setEditMode] = useState(false);
-    const [itemName, setItemName] = useState(list ? list.name : "");
     //@@viewOff:hooks
 
     const addList = (
-      <UU5.Bricks.Row>
-        <UU5.Bricks.Column colWidth="xs-12 s-10">
-          <UU5.Forms.Text
-            label=""
-            placeholder="List name"
-            value={itemName}
-            onChange={(opt) => {
-              setItemName(opt.value);
-            }}
-          />
-        </UU5.Bricks.Column>
-        <UU5.Bricks.Column colWidth="xs-12 s-2">
-          <UU5.Bricks.Button
-            onClick={() => {
-              onCreate({ name: itemName });
-              setItemName("");
-            }}
-          >
-            <UU5.Bricks.Icon icon="mdi-check" />
-          </UU5.Bricks.Button>
-        </UU5.Bricks.Column>
-      </UU5.Bricks.Row>
+      <UU5.Forms.TextButton
+        value={list?.name || ""}
+        message="Todo list name"
+        buttons={[
+          {
+            icon: "mdi-check",
+            onClick: async (opt) => {
+              const result = await onCreate({ name: opt.value });
+              UU5.Environment.getRouter().setRoute("home", { listId: result.id });
+            },
+            colorSchema: "info",
+          },
+        ]}
+      />
     );
 
     const editList = (
-      <UU5.Bricks.Row>
-        <UU5.Bricks.Column colWidth="xs-12 s-8">
-          <UU5.Forms.Text
-            label=""
-            placeholder="List name"
-            value={itemName}
-            onChange={(opt) => {
-              setItemName(opt.value);
-            }}
-          />
-        </UU5.Bricks.Column>
-        <UU5.Bricks.Column colWidth="xs-12 s-2">
-          <UU5.Bricks.Button bgStyle={"outline"} onClick={() => onDelete({ id: list.id, forceDelete: true })}>
-            <UU5.Bricks.Icon icon="mdi-delete" />
-          </UU5.Bricks.Button>
-        </UU5.Bricks.Column>
-        <UU5.Bricks.Column colWidth="xs-12 s-2">
-          <UU5.Bricks.Button
-            onClick={() => {
-              onUpdate({ id: list.id, name: itemName });
+      <UU5.Forms.TextButton
+        placeholder="Insert todo list name"
+        value={list?.name || ""}
+        message="Todo list name"
+        buttons={[
+          {
+            icon: "mdi-delete",
+            onClick: async (opt) => {
+              await onDelete({ id: list.id, forceDelete: true });
+              UU5.Environment.getRouter().setRoute("home");
+            },
+            colorSchema: "info",
+          },
+
+          {
+            icon: "mdi-check",
+            onClick: (opt) => {
+              if (opt.value !== list.name) {
+                onUpdate({ id: list.id, name: opt.value });
+              }
               setEditMode(false);
-            }}
-          >
-            <UU5.Bricks.Icon icon="mdi-check" />
-          </UU5.Bricks.Button>
-        </UU5.Bricks.Column>
-      </UU5.Bricks.Row>
+            },
+            colorSchema: "info",
+          },
+        ]}
+      />
     );
 
     const viewList = (
       <UU5.Bricks.Row>
-        <UU5.Bricks.Column colWidth="xs-12 s-10">{itemName}</UU5.Bricks.Column>
+        <UU5.Bricks.Column colWidth="xs-12 s-10">{list?.name || ""}</UU5.Bricks.Column>
         <UU5.Bricks.Column colWidth="xs-12 s-2">
           <UU5.Bricks.Button icon="mdi-lead-pencil" onClick={() => setEditMode(true)}>
             <UU5.Bricks.Icon icon="mdi-lead-pencil" />
