@@ -7,6 +7,8 @@ Zadání [frontend](https://uuapp.plus4u.net/uu-bookkit-maing01/78462435-bbbfbad
 
 ### Schema
 
+![demo](schemas.png)
+
 TodoInstance object:
 ```js
 const todoInstanceSchema = {
