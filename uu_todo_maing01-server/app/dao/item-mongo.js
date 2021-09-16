@@ -21,20 +21,18 @@ class ItemMongo extends UuObjectDao {
   }
 
   async listByListAndState(awid, listId, state, pageInfo) {
-    let filter = {
-      awid,
-      listId,
-      state,
-    };
-    return await super.find(filter, pageInfo);
+    return await super.find({ awid, listId, state }, pageInfo);
+  }
+
+  /**
+   * this method is over the planned scope
+   */
+  async listByListId(awid, listId, pageInfo) {
+    return await super.find({ awid, listId }, pageInfo);
   }
 
   async listByState(awid, state, pageInfo) {
-    let filter = {
-      awid,
-      state,
-    };
-    return await super.find(filter, pageInfo);
+    return await super.find({ awid, state }, pageInfo);
   }
 
   async list(awid, pageInfo = {}) {

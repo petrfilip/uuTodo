@@ -1,8 +1,7 @@
 //@@viewOn:imports
 import UU5 from "uu5g04";
-import { createVisualComponent, useContext, useRef } from "uu5g04-hooks";
+import { createVisualComponent } from "uu5g04-hooks";
 import Config from "./config/config";
-import Lsi from "./items.lsi";
 import ItemProvider from "../bricks/item-provider";
 import ItemsTitle from "../items-title";
 import ItemList from "../bricks/item-list";

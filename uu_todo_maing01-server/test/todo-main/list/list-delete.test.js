@@ -38,18 +38,23 @@ describe("list delete uuCMD tests", () => {
     let dtoIn = {
       name: "ABCD",
     };
-    let result = await TestHelper.executePostCommand("list/create", dtoIn);
+    let resultList = await TestHelper.executePostCommand("list/create", dtoIn);
+    let resultItem1 = await TestHelper.executePostCommand("item/create", { listId: resultList.id, text: "my text 1" });
+    let resultItem2 = await TestHelper.executePostCommand("item/create", { listId: resultList.id, text: "my text 2" });
+    let resultItem3 = await TestHelper.executePostCommand("item/create", { listId: resultList.id, text: "my text 3" });
+    let resultItem4 = await TestHelper.executePostCommand("item/create", { listId: resultList.id, text: "my text 4" });
+    let resultItem5 = await TestHelper.executePostCommand("item/create", { listId: resultList.id, text: "my text 5" });
 
-    expect(result.data.name).toEqual(dtoIn.name);
-    expect(result.data.awid).toEqual(TestHelper.awid);
-    expect(result.data.uuAppErrorMap).toEqual({});
+    expect(resultList.data.name).toEqual(dtoIn.name);
+    expect(resultList.data.awid).toEqual(TestHelper.awid);
+    expect(resultList.data.uuAppErrorMap).toEqual({});
 
     // execute the test
-    let result1 = await TestHelper.executePostCommand("list/delete", { id: result.id, forceDelete: true });
+    let result1 = await TestHelper.executePostCommand("list/delete", { id: resultList.id, forceDelete: true });
     expect(result1.data.uuAppErrorMap).toEqual({});
   });
 
-  test("Alternative - delete non-empty list", async () => {
+  test("Alternative - delete non-empty list without forceDelete", async () => {
     // prepare data
     let resultList = await TestHelper.executePostCommand("list/create", { name: "ABCD" });
     let resultItem = await TestHelper.executePostCommand("item/create", { listId: resultList.id, text: "my text" });

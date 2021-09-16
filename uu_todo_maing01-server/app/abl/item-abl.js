@@ -261,6 +261,8 @@ class ItemAbl {
 
     if (dtoIn.listId && dtoIn.state) {
       itemList = await Dao.item.listByListAndState(awid, dtoIn.listId, dtoIn.state, dtoIn.pageInfo);
+    } else if (dtoIn.listId) {
+      itemList = await Dao.item.listByListId(awid, dtoIn.listId, dtoIn.pageInfo); // this state is over the scope
     } else if (dtoIn.state) {
       itemList = await Dao.item.listByState(awid, dtoIn.state, dtoIn.pageInfo);
     } else {

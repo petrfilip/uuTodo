@@ -8,12 +8,13 @@ import Item from "./item";
 
 const ItemList = createVisualComponent({
   //@@viewOn:statics
-  displayName: Config.TAG + "JokeList",
+  displayName: Config.TAG + "ItemList",
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
     items: UU5.PropTypes.array.isRequired,
+    loadCompleted: UU5.PropTypes.func,
     onUpdate: UU5.PropTypes.func,
     onDelete: UU5.PropTypes.func,
     setFinalState: UU5.PropTypes.func,
@@ -44,48 +45,42 @@ const ItemList = createVisualComponent({
     //@@viewOn:render
     function renderActiveItem(item) {
       return (
-        item.data.data.state === "active" && (
-          <Item
-            item={item.data.data}
-            colorSchema="green"
-            onUpdate={onUpdate}
-            onDelete={onDelete}
-            setFinalState={setFinalState}
-          />
-        )
+        <Item
+          key={item.data.data.id}
+          item={item.data.data}
+          onUpdate={onUpdate}
+          onDelete={onDelete}
+          setFinalState={setFinalState}
+        />
       );
     }
 
     function renderCompletedItem(item) {
-      return (
-        showAll &&
-        item.data.data.state === "completed" && <Item item={item.data.data} colorSchema="green" onDelete={onDelete} />
-      );
+      return showAll && <Item key={item.data.data.id} item={item.data.data} onDelete={onDelete} />;
     }
 
     if (items.length === 0) {
-      return <UU5.Common.Error content="No items!" />;
+      return (
+        <>
+          <UU5.Common.Error content="No items!" />
+        </>
+      );
     }
+
+    const activeItems = items.filter((item) => item?.data?.state === "active");
+    const completedItems = items.filter((item) => item?.data?.state === "completed");
 
     return (
       <>
-        <Uu5Tiles.Grid data={items} tileHeight="auto" rowSpacing={8}>
+        <Uu5Tiles.Grid data={activeItems} tileHeight="auto" rowSpacing={8}>
           {renderActiveItem}
         </Uu5Tiles.Grid>
 
-        {(showAll && (
-          <UU5.Bricks.Button onClick={handleClick}>
-            Hide completed
-            <UU5.Bricks.Icon icon="mdi-apple" />
-          </UU5.Bricks.Button>
-        )) || (
-          <UU5.Bricks.Button onClick={handleClick}>
-            Show completed
-            <UU5.Bricks.Icon icon="mdi-apple" />
-          </UU5.Bricks.Button>
+        {(showAll && <UU5.Bricks.Button onClick={handleClick}>Hide completed</UU5.Bricks.Button>) || (
+          <UU5.Bricks.Button onClick={handleClick}>Show completed</UU5.Bricks.Button>
         )}
 
-        <Uu5Tiles.Grid data={items} tileHeight="auto" rowSpacing={8}>
+        <Uu5Tiles.Grid data={completedItems} tileHeight="auto" rowSpacing={8}>
           {renderCompletedItem}
         </Uu5Tiles.Grid>
       </>

@@ -1,5 +1,5 @@
 //@@viewOn:imports
-import { createComponent, useDataList, useState, useEffect } from "uu5g04-hooks";
+import { createComponent, useDataList, useEffect } from "uu5g04-hooks";
 import Calls from "calls";
 import Config from "./config/config";
 //@@viewOff:imports
@@ -11,12 +11,14 @@ const ItemProvider = createComponent({
 
   render({ children, listId }) {
     //@@viewOn:hooks
-
+    const pageInfo = {
+      pageIndex: 0,
+      pageSize: 500,
+    };
     let listDataValues = useDataList({
       pageSize: 300,
       handlerMap: {
-        load: () => Calls.listItems({ listId: listId, state: "active" }),
-        // load: Calls.listItems,
+        load: () => Calls.listItems({ listId: listId, pageInfo }),
         createItem: Calls.createItem,
         updateItem: Calls.updateItem,
         deleteItem: Calls.deleteItem,

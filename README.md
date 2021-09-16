@@ -3,6 +3,8 @@
 Zadání [frontend](https://uuapp.plus4u.net/uu-bookkit-maing01/78462435-bbbfbad5d130488e85ccad7d34b61a22/book/page?code=67586767) 
 & [backend](https://uuapp.plus4u.net/uu-bookkit-maing01/bbbfbad5d130488e85ccad7d34b61a22/book/page?code=uuToDo_uuSubApp) 
 
+![demo](demo.gif)
+
 ### Schema
 
 TodoInstance object:
@@ -101,10 +103,10 @@ const itemSchema = {
 
 
 TODO:
-- [ ] backend testy
+- [x] backend tests
 - [ ] mock data
-- [ ] deadline do GUI listu
-- [ ] problém se stránkováním z frontendu (chodí string místo int)
+- [ ] deadline do GUI listu - nedělat
+- [ ] přidat lsi
 
 ## Development and Usage
 
