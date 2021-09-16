@@ -40,11 +40,7 @@ export const Bottom = createVisualComponent({
 
     //@@viewOn:render
     const attrs = UU5.Common.VisualComponent.getAttrs(props, CLASS_NAMES.main());
-    return (
-      <div {...attrs}>
-        uuTodoMaing01-{process.env.VERSION} Copyleft ©
-      </div>
-    );
+    return <div {...attrs}>uuTodoMaing01-{process.env.VERSION} Copyleft ©</div>;
     //@@viewOff:render
   },
 });

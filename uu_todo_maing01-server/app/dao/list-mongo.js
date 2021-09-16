@@ -35,7 +35,7 @@ class ListMongo extends UuObjectDao {
   }
 
   async list(awid, pageInfo = {}) {
-    return await super.find({awid}, pageInfo);
+    return await super.find({ awid }, pageInfo);
   }
 }
 
