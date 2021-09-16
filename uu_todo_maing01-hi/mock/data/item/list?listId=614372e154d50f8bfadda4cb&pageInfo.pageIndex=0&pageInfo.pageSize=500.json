@@ -1,0 +1,74 @@
+{
+  "itemList": [
+    {
+      "text": "Learn NodeJs",
+      "highPriority": true,
+      "listId": "614372e154d50f8bfadda4cb",
+      "state": "active",
+      "awid": "22222222222222222222222222222222",
+      "sys": {
+        "cts": "2021-09-16T16:38:02.401Z",
+        "mts": "2021-09-16T16:38:02.401Z",
+        "rev": 0
+      },
+      "id": "614372ea54d50f8bfadda4ce"
+    },
+    {
+      "text": "Learn ReactJS",
+      "highPriority": true,
+      "listId": "614372e154d50f8bfadda4cb",
+      "state": "active",
+      "awid": "22222222222222222222222222222222",
+      "sys": {
+        "cts": "2021-09-16T16:38:11.067Z",
+        "mts": "2021-09-16T16:38:11.067Z",
+        "rev": 0
+      },
+      "id": "614372f354d50f8bfadda4d0"
+    },
+    {
+      "text": "Learn GraphQL",
+      "highPriority": false,
+      "listId": "614372e154d50f8bfadda4cb",
+      "state": "active",
+      "awid": "22222222222222222222222222222222",
+      "sys": {
+        "cts": "2021-09-16T16:38:17.137Z",
+        "mts": "2021-09-16T16:38:17.137Z",
+        "rev": 0
+      },
+      "id": "614372f954d50f8bfadda4d2"
+    },
+    {
+      "text": "Learn HTML",
+      "highPriority": true,
+      "listId": "614372e154d50f8bfadda4cb",
+      "state": "completed",
+      "awid": "22222222222222222222222222222222",
+      "sys": {
+        "cts": "2021-09-16T16:38:59.080Z",
+        "mts": "2021-09-16T16:39:05.962Z",
+        "rev": 1
+      },
+      "id": "6143732354d50f8bfadda4d9"
+    },
+    {
+      "text": "Learn MongoDB",
+      "highPriority": false,
+      "listId": "614372e154d50f8bfadda4cb",
+      "state": "completed",
+      "awid": "22222222222222222222222222222222",
+      "sys": {
+        "cts": "2021-09-16T16:39:03.673Z",
+        "mts": "2021-09-16T16:39:04.794Z",
+        "rev": 1
+      },
+      "id": "6143732754d50f8bfadda4db"
+    }
+  ],
+  "pageInfo": {
+    "pageIndex": 0,
+    "pageSize": 500,
+    "total": 5
+  }
+}

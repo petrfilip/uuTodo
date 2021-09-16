@@ -94,7 +94,7 @@ const itemSchema = {
 - [x] Delete a task
 - [x] Edit a task
 - [x] Change task state
-- [ ] Filter tasks
+- [x] Filter tasks
 - [ ] Styling
 
 
@@ -104,9 +104,9 @@ const itemSchema = {
 
 TODO:
 - [x] backend tests
-- [ ] mock data
+- [x] mock data
 - [ ] deadline do GUI listu - nedělat
-- [x] přidat lsi
+- [x] add lsi
 
 ## Development and Usage
 

@@ -1,0 +1,26 @@
+{
+  "text": "Learn ReactJS2",
+  "highPriority": true,
+  "listId": "614372e154d50f8bfadda4cb",
+  "state": "active",
+  "awid": "22222222222222222222222222222222",
+  "sys": {
+    "cts": "2021-09-16T16:38:11.067Z",
+    "mts": "2021-09-16T17:25:34.542Z",
+    "rev": 1
+  },
+  "id": "614372f354d50f8bfadda4d0",
+  "uuAppErrorMap": {
+    "uu-todo-main/item/get/unsupportedKeys": {
+      "type": "warning",
+      "message": "DtoIn contains unsupported keys.",
+      "paramMap": {
+        "unsupportedKeyList": [
+          "$.state",
+          "$.awid",
+          "$.sys"
+        ]
+      }
+    }
+  }
+}

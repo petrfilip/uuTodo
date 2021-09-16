@@ -1,0 +1,48 @@
+{
+  "itemList": [
+    {
+      "text": "Pay bills",
+      "highPriority": false,
+      "listId": "6143700a54d50f8bfadda4a2",
+      "state": "active",
+      "awid": "22222222222222222222222222222222",
+      "sys": {
+        "cts": "2021-09-16T16:38:43.094Z",
+        "mts": "2021-09-16T16:38:43.094Z",
+        "rev": 0
+      },
+      "id": "6143731354d50f8bfadda4d5"
+    },
+    {
+      "text": "Learn how to center div",
+      "highPriority": true,
+      "listId": "6143700a54d50f8bfadda4a2",
+      "state": "completed",
+      "awid": "22222222222222222222222222222222",
+      "sys": {
+        "cts": "2021-09-16T16:26:07.635Z",
+        "mts": "2021-09-16T17:00:54.916Z",
+        "rev": 1
+      },
+      "id": "6143701f54d50f8bfadda4a5"
+    },
+    {
+      "text": "Clean a car",
+      "highPriority": false,
+      "listId": "6143700a54d50f8bfadda4a2",
+      "state": "completed",
+      "awid": "22222222222222222222222222222222",
+      "sys": {
+        "cts": "2021-09-16T16:27:35.531Z",
+        "mts": "2021-09-16T16:27:37.029Z",
+        "rev": 1
+      },
+      "id": "6143707754d50f8bfadda4a7"
+    }
+  ],
+  "pageInfo": {
+    "pageIndex": 0,
+    "pageSize": 500,
+    "total": 3
+  }
+}
