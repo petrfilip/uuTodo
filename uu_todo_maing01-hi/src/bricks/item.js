@@ -11,6 +11,10 @@ const Mode = {
   EDIT: "EDIT",
 };
 
+const completedTaskClassName = Config.Css.css`
+  text-decoration: line-through;
+  `;
+
 const Item = createVisualComponent({
   //@@viewOn:statics
   displayName: Config.TAG + "Item",
@@ -68,7 +72,7 @@ const Item = createVisualComponent({
               {item.highPriority && <UU5.Bricks.Icon icon={"mdi-arrow-up"} />}
             </UU5.Bricks.Column>
             <UU5.Bricks.Column colWidth="xs-12 s-10">
-              <UU5.Bricks.P>{item.text}</UU5.Bricks.P>
+              <UU5.Bricks.P className={item.state !== "active" ? completedTaskClassName : ""}>{item.text}</UU5.Bricks.P>
             </UU5.Bricks.Column>
 
             {item.state === "active" && (

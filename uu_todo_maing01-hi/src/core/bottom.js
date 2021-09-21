@@ -2,7 +2,6 @@
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 import { createVisualComponent } from "uu5g04-hooks";
-import Lsi from "../config/lsi.js";
 
 import Config from "./config/config.js";
 //@@viewOff:imports
@@ -19,6 +18,7 @@ const CLASS_NAMES = {
     text-align: center;
     border-top: 1px solid rgba(0, 0, 0, 0.12);
     color: gray;
+    background-color: rgb(227, 242, 253);
   `,
 };
 
@@ -40,7 +40,11 @@ export const Bottom = createVisualComponent({
 
     //@@viewOn:render
     const attrs = UU5.Common.VisualComponent.getAttrs(props, CLASS_NAMES.main());
-    return <div {...attrs}>uuTodoMaing01-{process.env.VERSION} Copyleft ©</div>;
+    return (
+      <div className={CLASS_NAMES.main()} {...attrs}>
+        uuTodoMaing01-{process.env.VERSION} Copyleft ©
+      </div>
+    );
     //@@viewOff:render
   },
 });

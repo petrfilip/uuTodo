@@ -97,7 +97,7 @@ const itemSchema = {
 - [x] Edit a task
 - [x] Change task state
 - [x] Filter tasks
-- [ ] Styling
+- [x] Styling
 
 
 

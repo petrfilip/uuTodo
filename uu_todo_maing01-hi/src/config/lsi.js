@@ -40,6 +40,10 @@ const Lsi = {
       cs: "Úkol s vysokou prioritou?",
       en: "Is high priority task?",
     },
+    addToDoPlaceholder: {
+      cs: "Název úkolu",
+      en: "Task name",
+    },
   },
 
   list: {

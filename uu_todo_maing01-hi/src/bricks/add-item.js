@@ -42,7 +42,7 @@ const AddItem = createVisualComponent({
 
     return (
       <UU5.Forms.Form onSave={({ values }) => onSave({ ...defaultValues, ...values, listId })} onCancel={onCancelClick}>
-        <UU5.Forms.Text value={defaultValues?.text} name="text" placeholder="Add a to do ..." required />
+        <UU5.Forms.Text value={defaultValues?.text} name="text" placeholder={Lsi.addItem.addToDoPlaceholder} required />
         <UU5.Forms.SwitchSelector
           value={defaultValues?.highPriority ? String(defaultValues?.highPriority) : "false"}
           items={["true", "false"].map((value) => ({ value }))}

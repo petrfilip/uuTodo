@@ -1,11 +1,6 @@
 "use strict";
 const { Validator } = require("uu_appg01_server").Validation;
-const { DaoFactory, ObjectStoreError } = require("uu_appg01_server").ObjectStore;
 const { ValidationHelper } = require("uu_appg01_server").AppServer;
-const { Profile, AppClientTokenService, UuAppWorkspace, UuAppWorkspaceError } = require("uu_appg01_server").Workspace;
-const { UriBuilder } = require("uu_appg01_server").Uri;
-const { LoggerFactory } = require("uu_appg01_server").Logging;
-const { AppClient } = require("uu_appg01_server");
 const Errors = require("../api/errors/list-error.js");
 const { Dao, ValidatorService } = require("./config");
 
@@ -28,14 +23,12 @@ const WARNINGS = {
   },
 };
 
-const logger = LoggerFactory.get("ListAbl");
-
 class ListAbl {
   constructor() {
     this.validator = Validator.load();
   }
 
-  async create(uri, dtoIn, session) {
+  async create(uri, dtoIn) {
     const awid = uri.getAwid();
     // HDS 1 - Validation of dtoIn.
     let validationResult = this.validator.validate("listCreateDtoInType", dtoIn);
@@ -71,7 +64,7 @@ class ListAbl {
     };
   }
 
-  async get(uri, dtoIn, session) {
+  async get(uri, dtoIn) {
     const awid = uri.getAwid();
     // HDS 1 - Validation of dtoIn.
     let validationResult = this.validator.validate("listGetDtoInType", dtoIn);
@@ -96,7 +89,7 @@ class ListAbl {
     return { ...list, ...uuAppErrorMap };
   }
 
-  async update(uri, dtoIn, session) {
+  async update(uri, dtoIn) {
     const awid = uri.getAwid();
     // HDS 1 - Validation of dtoIn.
     let validationResult = this.validator.validate("listUpdateDtoInType", dtoIn);
@@ -132,7 +125,7 @@ class ListAbl {
     };
   }
 
-  async delete(uri, dtoIn, session) {
+  async delete(uri, dtoIn) {
     const awid = uri.getAwid();
     // HDS 1 - Validation of dtoIn.
     let validationResult = this.validator.validate("listDeleteDtoInType", dtoIn);
@@ -177,7 +170,7 @@ class ListAbl {
     return dtoOut;
   }
 
-  async list(uri, dtoIn, session) {
+  async list(uri, dtoIn) {
     const awid = uri.getAwid();
     dtoIn.pageInfo = {
       pageIndex: 0,

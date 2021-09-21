@@ -3,7 +3,7 @@ const TodoMainAbl = require("../../abl/todo-instance-abl.js");
 
 class TodoInstanceController {
   init(ucEnv) {
-    return TodoMainAbl.init(ucEnv.getUri(), ucEnv.getDtoIn(), ucEnv.getSession());
+    return TodoMainAbl.init(ucEnv.getUri(), ucEnv.getDtoIn());
   }
 
   load(ucEnv) {
@@ -11,11 +11,11 @@ class TodoInstanceController {
   }
 
   update(ucEnv) {
-    return TodoMainAbl.update(ucEnv.getUri(), ucEnv.getDtoIn(), ucEnv.getSession());
+    return TodoMainAbl.update(ucEnv.getUri(), ucEnv.getDtoIn());
   }
 
   setState(ucEnv) {
-    return TodoMainAbl.setState(ucEnv.getUri(), ucEnv.getDtoIn(), ucEnv.getSession());
+    return TodoMainAbl.setState(ucEnv.getUri(), ucEnv.getDtoIn());
   }
 }
 

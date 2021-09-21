@@ -8,6 +8,14 @@ import Lsi from "../config/lsi.js";
 
 //@@viewOff:imports
 
+const buttonClassName = Config.Css.css`
+  font-size: 36px;
+  text-decoration: underline;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  `;
+
 const ItemList = createVisualComponent({
   //@@viewOn:statics
   displayName: Config.TAG + "ItemList",
@@ -16,7 +24,6 @@ const ItemList = createVisualComponent({
   //@@viewOn:propTypes
   propTypes: {
     items: UU5.PropTypes.array.isRequired,
-    loadCompleted: UU5.PropTypes.func,
     onUpdate: UU5.PropTypes.func,
     onDelete: UU5.PropTypes.func,
     setFinalState: UU5.PropTypes.func,
@@ -25,7 +32,7 @@ const ItemList = createVisualComponent({
 
   //@@viewOn:defaultProps
   defaultProps: {
-    items: [],
+    items: null,
     onUpdate: () => {},
     onDelete: () => {},
     setFinalState: () => {},
@@ -79,11 +86,11 @@ const ItemList = createVisualComponent({
         </Uu5Tiles.Grid>
 
         {(showAll && (
-          <UU5.Bricks.Button onClick={handleClick}>
+          <UU5.Bricks.Button className={buttonClassName} onClick={handleClick}>
             <UU5.Bricks.Lsi lsi={Lsi.item.hideCompleted} />
           </UU5.Bricks.Button>
         )) || (
-          <UU5.Bricks.Button onClick={handleClick}>
+          <UU5.Bricks.Button className={buttonClassName} onClick={handleClick}>
             <UU5.Bricks.Lsi lsi={Lsi.item.showCompleted} />
           </UU5.Bricks.Button>
         )}

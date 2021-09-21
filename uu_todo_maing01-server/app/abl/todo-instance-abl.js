@@ -1,11 +1,8 @@
 "use strict";
 const { Validator } = require("uu_appg01_server").Validation;
-const { DaoFactory, ObjectStoreError } = require("uu_appg01_server").ObjectStore;
+const { DaoFactory } = require("uu_appg01_server").ObjectStore;
 const { ValidationHelper } = require("uu_appg01_server").AppServer;
-const { Profile, AppClientTokenService, UuAppWorkspace, UuAppWorkspaceError } = require("uu_appg01_server").Workspace;
-const { UriBuilder } = require("uu_appg01_server").Uri;
-const { LoggerFactory } = require("uu_appg01_server").Logging;
-const { AppClient } = require("uu_appg01_server");
+const { Profile, UuAppWorkspaceError } = require("uu_appg01_server").Workspace;
 const Errors = require("../api/errors/todo-instance-error.js");
 const { Dao, ValidatorService } = require("./config");
 
@@ -15,14 +12,12 @@ const WARNINGS = {
   },
 };
 
-const logger = LoggerFactory.get("TodoInstanceAbl");
-
 class TodoInstanceAbl {
   constructor() {
     this.validator = Validator.load();
   }
 
-  async init(uri, dtoIn, session) {
+  async init(uri, dtoIn) {
     const awid = uri.getAwid();
     // HDS 1
     let validationResult = this.validator.validate("sysUuAppWorkspaceInitDtoInType", dtoIn);
@@ -108,7 +103,7 @@ class TodoInstanceAbl {
     };
   }
 
-  async update(uri, dtoIn, session) {
+  async update(uri, dtoIn) {
     const awid = uri.getAwid();
     // HDS 1 - Validation of dtoIn.
     let validationResult = this.validator.validate("todoInstanceUpdateDtoInType", dtoIn);
@@ -146,7 +141,7 @@ class TodoInstanceAbl {
     };
   }
 
-  async setState(uri, dtoIn, session) {
+  async setState(uri, dtoIn) {
     const awid = uri.getAwid();
     // HDS 1 - Validation of dtoIn.
     let validationResult = this.validator.validate("todoInstanceSetStateDtoInType", dtoIn);

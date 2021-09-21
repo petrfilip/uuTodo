@@ -6,6 +6,10 @@ import Lsi from "../config/lsi";
 
 //@@viewOff:imports
 
+const viewListRowClassName = Config.Css.css`
+      cursor: crosshair;
+  `;
+
 const List = createVisualComponent({
   //@@viewOn:statics
   displayName: Config.TAG + "Joke",
@@ -14,12 +18,13 @@ const List = createVisualComponent({
   //@@viewOn:propTypes
   propTypes: {
     list: UU5.PropTypes.any,
-    colorSchema: UU5.PropTypes.string,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:defaultProps
-  defaultProps: {},
+  defaultProps: {
+    list: null,
+  },
   //@@viewOff:defaultProps
 
   render({ list, onDelete, onUpdate, onCreate }) {
@@ -74,7 +79,7 @@ const List = createVisualComponent({
     );
 
     const viewList = (
-      <UU5.Bricks.Row>
+      <UU5.Bricks.Row className={viewListRowClassName}>
         <UU5.Bricks.Column colWidth="xs-12 s-10">{list?.name || ""}</UU5.Bricks.Column>
         <UU5.Bricks.Column colWidth="xs-12 s-2">
           <UU5.Bricks.Button icon="mdi-lead-pencil" onClick={() => setEditMode(true)}>
